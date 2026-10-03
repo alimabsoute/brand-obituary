@@ -1,0 +1,130 @@
+<div class="sec-head"><div class="sec-k"><span class="sn">13</span>The fork in the road</div><h2 class="rv">What if…</h2><p class="lede rv">Three decisions where the story could have gone differently. The “What if” panels are speculation, labeled as such.</p></div>
+<div class="fork-tabs" id="forkTabs"><button class="on" data-i="0">Price for profit</button><button data-i="1">Skip the Super Bowl</button><button data-i="2">Consolidate early</button></div>
+<div class="fork-panel on">
+<div class="actual"><div class="lbl">What happened</div><p>Pets.com sold products below their delivered cost. Cost of goods sold, which by the company’s definition includes outbound and inbound shipping, ran above net sales every quarter, peaking at a −211% gross margin in Q3 1999.<sup class="fn"><a href="#src-4">4</a></sup> The prospectus acknowledged it might offer “shipping below our actual costs to attract customers.”<sup class="fn"><a href="#src-1">1</a></sup></p></div>
+<div class="whatif"><div class="lbl">What if (speculative)</div><p>Pricing heavy, low-margin goods like litter and kibble at or above landed cost, or adding a shipping threshold, would have meant slower growth but positive unit economics. By Q3 2000 the gross margin was −3%, almost break-even.<sup class="fn"><a href="#src-4">4</a></sup> Getting there a year earlier might have stretched the runway past the 2000 funding freeze.</p></div>
+</div>
+<div class="fork-panel">
+<div class="actual"><div class="lbl">What happened</div><p>Marketing and sales spend hit $30.7M in Q4 1999 and $28.9M in Q1 2000, the Super Bowl quarter, while quarterly sales were $5.2M and $7.7M.<sup class="fn"><a href="#src-2">2</a></sup> eCompany Now, citing PC Data Online, reported that site traffic actually fell the month after the Super Bowl ad.<sup class="fn"><a href="#src-15">15</a></sup></p></div>
+<div class="whatif"><div class="lbl">What if (speculative)</div><p>Spending in channels aimed at pet owners (vets, plus the Amazon cross-promotion it already had<sup class="fn"><a href="#src-1">1</a></sup>) instead of mass-market TV could have kept tens of millions in the bank. That would have been enough to cover the roughly $20M an analyst said it needed to keep going.<sup class="fn"><a href="#src-11">11</a></sup></p></div>
+</div>
+<div class="fork-panel">
+<div class="actual"><div class="lbl">What happened</div><p>Four VC-funded online pet stores fought each other on price (see Section 08). Pets.com didn’t absorb Petstore.com until July 2000<sup class="fn"><a href="#src-7">7</a></sup>, after the IPO window had closed.</p></div>
+<div class="whatif"><div class="lbl">What if (speculative)</div><p>A merger in 1999, while private capital was still plentiful, could have removed a price war and combined marketing budgets. Chewy’s later dominance suggests the category could support one well-run leader, but probably not four money-losing ones.</p></div>
+</div>
+</div>
+</section>
+
+<section id="vs" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">14</span>The one that made it</div><h2 class="rv">Pets.com vs. Chewy</h2><p class="lede rv">The same idea, a decade later. Chewy (founded 2011) built on subscriptions (Autoship) and positive gross margins.</p></div>
+<div class="vs rv">
+<div class="vs-col dead"><span class="tag">Dead</span><h3>Pets.com</h3>
+<div class="vs-row"><span>Founded</span><span>1998 / ops Feb 1999<sup class="fn"><a href="#src-1">1</a></sup></span></div>
+<div class="vs-row"><span>Lifetime revenue (to Sep 2000)</span><span>$31.6M<sup class="fn"><a href="#src-4">4</a></sup></span></div>
+<div class="vs-row"><span>Gross margin</span><span>−46% (lifetime)</span></div>
+<div class="vs-row"><span>Customers</span><span>~570,000 (Nov 2000)<sup class="fn"><a href="#src-5">5</a></sup></span></div>
+<div class="vs-row"><span>Repeat orders</span><span>&gt;59% of orders (Q2 2000)<sup class="fn"><a href="#src-3">3</a></sup></span></div>
+<div class="vs-row"><span>Outcome</span><span>Liquidated; $0.172/sh returned</span></div>
+</div>
+<div class="vs-mid">vs</div>
+<div class="vs-col alive"><span class="tag alive">Alive</span><h3>Chewy</h3>
+<div class="vs-row"><span>Founded</span><span>2011<sup class="fn"><a href="#src-20">20</a></sup></span></div>
+<div class="vs-row"><span>First full-year sales (2012)</span><span>$26M<sup class="fn"><a href="#src-22">22</a></sup></span></div>
+<div class="vs-row"><span>FY2024 net sales</span><span>$11.86B<sup class="fn"><a href="#src-19">19</a></sup></span></div>
+<div class="vs-row"><span>FY2024 gross margin</span><span>29.2%<sup class="fn"><a href="#src-19">19</a></sup></span></div>
+<div class="vs-row"><span>Active customers</span><span>20.5M<sup class="fn"><a href="#src-19">19</a></sup></span></div>
+<div class="vs-row"><span>Repeat engine</span><span>Autoship = 79.2% of sales<sup class="fn"><a href="#src-19">19</a></sup></span></div>
+<div class="vs-row"><span>Outcome</span><span>Sold to PetSmart (~$3.35B reported, 2017)<sup class="fn"><a href="#src-20">20</a></sup>; IPO at $22 (2019)<sup class="fn"><a href="#src-21">21</a></sup></span></div>
+</div>
+</div>
+<div class="card rv" style="margin-top:26px">
+<div class="card-head"><div><h3>Revenue, on a log scale</h3><p>Chewy’s revenue in a single year is several hundred times Pets.com’s entire lifetime revenue.</p></div></div>
+<div class="cbox"><canvas id="vsChart"></canvas></div>
+<div class="src">Pets.com: sum of reported quarterly net sales, Feb 1999–Sep 2000<sup class="fn"><a href="#src-4">4</a></sup>. Chewy 2012<sup class="fn"><a href="#src-22">22</a></sup>; 2016 “nearly $900 million”<sup class="fn"><a href="#src-20">20</a></sup>; FY2024<sup class="fn"><a href="#src-19">19</a></sup>.</div>
+</div>
+</div>
+</section>
+<section id="homage" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">15</span>Homage</div><h2 class="rv">The look of 1999, rebuilt</h2><p class="lede rv">An affectionate recreation of the Pets.com visual language: lime header, black tab bar, navy pill buttons, pale-yellow sidebar and rounded type. It was drawn from scratch with colors sampled from the archived pages. It is <b>not</b> the company’s logo or its trademarked sock puppet. For the real thing, see the archived pages in Section 03.</p></div>
+<div class="homage rv">
+<div class="hm-bar"><div class="hm-word">pets.com<small>because pets can’t drive · a recreation</small></div><div class="hm-btns"><span>shopping cart</span><span>my account</span><span>gift center</span><span>help</span></div></div>
+<div class="hm-nav"><span>home</span><span>dogs</span><span>cats</span><span>fish</span><span>birds</span><span>reptiles</span><span>small pets</span><span>sock puppet</span></div>
+<div class="hm-body">
+<div class="hm-side"><b>Today’s Features</b><br>Holiday gift baskets<br>Anniversary sale<br>Ask the Vet<br>Pet Psychics?<br>Potty Prompts<br><br><b>find</b> ▢ in Dog Stuff</div>
+<div class="hm-main"><svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Original line illustration of a sock puppet">
+<g fill="none" stroke="#1d1b18" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M92 372 L96 214 C88 160 96 108 138 84 C176 62 236 70 262 104 C282 130 276 160 252 170 L230 178 C222 200 214 214 206 226 L204 372" fill="#ffffff"/>
+<path d="M268 138 C250 152 222 160 196 162 C200 188 230 204 256 186 C268 176 272 154 268 138Z" fill="#d8314a" stroke-width="3"/><path d="M212 176 C222 192 240 194 250 184 C240 180 226 178 212 176Z" fill="#e8a0a8" stroke-width="2"/>
+<path d="M130 92 C104 96 88 130 98 168 C108 150 120 128 130 92Z" fill="#4a3a2c" stroke-width="2.4"/>
+<path d="M150 82 C126 54 92 40 70 54 C58 90 86 128 118 120" fill="#4a3a2c"/>
+<circle cx="178" cy="118" r="17" fill="#ffffff"/><circle cx="178" cy="118" r="10"/>
+<circle cx="174" cy="114" r="1.6" fill="#1d1b18"/><circle cx="182" cy="114" r="1.6" fill="#1d1b18"/><circle cx="174" cy="122" r="1.6" fill="#1d1b18"/><circle cx="182" cy="122" r="1.6" fill="#1d1b18"/>
+<ellipse cx="226" cy="108" rx="15" ry="20" fill="#4a3a2c" stroke-width="2.4"/>
+<circle cx="226" cy="108" r="9" fill="#ffffff"/><circle cx="223" cy="105" r="1.4" fill="#1d1b18"/><circle cx="229" cy="105" r="1.4" fill="#1d1b18"/><circle cx="223" cy="111" r="1.4" fill="#1d1b18"/><circle cx="229" cy="111" r="1.4" fill="#1d1b18"/>
+<path d="M262 104 C272 108 276 116 270 122 C262 124 256 118 258 110Z" fill="#1d1b18"/>
+<path d="M94 250 C130 262 172 262 206 250" stroke-width="10" stroke="#1d3f8a"/>
+<rect x="138" y="244" width="30" height="26" rx="5" fill="#ffffff"/><circle cx="153" cy="257" r="8"/><path d="M153 252v5l4 3" stroke-width="2"/>
+<path d="M96 340 C130 350 172 350 204 340" stroke-dasharray="2 7"/>
+<path d="M96 356 C130 366 172 366 204 356" stroke-dasharray="2 7"/>
+<path d="M120 300 c6 -8 14 -8 20 0 M160 312 c5 -6 12 -6 17 0" stroke="#9a9184" stroke-width="2"/>
+</g></svg>
+<div><div style="font-family:'Varela Round',sans-serif;font-size:28px;font-weight:700;line-height:1.15;color:#111">Everything your pet needs.<br><span style="color:#1d3f8a">Delivered to your door.</span></div>
+<p style="font-family:Verdana,sans-serif;font-size:13px;color:#333;margin-top:12px">An original illustration in the spirit of the button-eyed mascot. Its open mouth, watch collar and floppy brown ear are drawn freehand.</p>
+<div class="hm-btns" style="margin-top:12px"><span>shop dogs</span><span>shop cats</span></div></div>
+</div></div>
+</div>
+<div class="swatches">
+<div class="sw"><span class="chip-c" style="background:#99cc33"></span><b>#99CC33</b>Header lime</div>
+<div class="sw"><span class="chip-c" style="background:#111"></span><b>#111111</b>Tab bar</div>
+<div class="sw"><span class="chip-c" style="background:#1d3f8a"></span><b>≈#1D3F8A</b>Pill buttons</div>
+<div class="sw"><span class="chip-c" style="background:#ffffcc"></span><b>#FFFFCC</b>Sidebar</div>
+<div class="sw"><span class="chip-c" style="background:#cc0000"></span><b>#CC0000</b>Sale prices</div>
+</div>
+<p class="disclaimer">Colors were sampled from archived captures<sup class="fn"><a href="#src-36">36</a></sup>. The navy is approximate because of JPEG compression in the archive. Pets.com and the sock puppet were trademarks of their respective owners. This section is commentary and homage, not affiliated with or endorsed by any rights holder.</p>
+</div>
+</section>
+
+<section id="now">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">16</span>Where are they now</div><h2 class="rv">The afterlife</h2></div>
+<div class="now-grid">
+<div class="now rv"><div class="st" style="color:var(--gold)">Reincarnated</div><h3>The sock puppet</h3><p>Hakan Enterprises bought the rights for <b>$125,000</b> in 2001.<sup class="fn"><a href="#src-17">17</a></sup> In May 2002 it became the spokes-dog for 1-800-BarNone, a car-loan company for people with bad credit: “Everyone deserves a second chance.”<sup class="fn"><a href="#src-18">18</a></sup></p></div>
+<div class="now rv"><div class="st" style="color:var(--blue)">Acquired</div><h3>The domain</h3><p>PetSmart.com paid <b>$375,000</b> for the domain names, trademarks and related IP: $225K on signing and $150K at closing.<sup class="fn"><a href="#src-6">6</a></sup> By February 2001, pets.com welcomed visitors to PETsMART.com.<sup class="fn"><a href="#src-36">36</a></sup></p></div>
+<div class="now rv"><div class="st" style="color:var(--red)">Buried</div><h3>The company</h3><p>Renamed IPET Holdings, with Richard G. Couch as sole director, based in Danville, CA.<sup class="fn"><a href="#src-6">6</a></sup> The proxy had estimated “up to approximately $0.25” a share<sup class="fn"><a href="#src-24">24</a></sup>. Holders got $0.172 in total, and the registration ended in 2005.<sup class="fn"><a href="#src-23">23</a></sup></p></div>
+<div class="now rv"><div class="st" style="color:var(--mute)">Written off</div><h3>Amazon’s stake</h3><p>About 30% as of Oct 31, 2000. A spokeswoman said its value was “down to zero.”<sup class="fn"><a href="#src-11">11</a></sup></p></div>
+<div class="now rv"><div class="st" style="color:var(--mute)">Dispersed</div><h3>The 320 employees</h3><p>About 255 were laid off on Nov 7, 2000.<sup class="fn"><a href="#src-5">5</a></sup> The 26 who were left at year-end resigned after the January 2001 vote.<sup class="fn"><a href="#src-6">6</a></sup></p></div>
+<div class="now rv"><div class="st" style="color:var(--green)">Vindicated</div><h3>The idea</h3><p>Chewy did $11.86B in FY2024 net sales, nearly 80% of it from Autoship subscriptions.<sup class="fn"><a href="#src-19">19</a></sup></p></div>
+</div>
+</div>
+</section>
+
+<section id="sources" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">17</span>Sources &amp; data notes</div><h2 class="rv">Show your work</h2><p class="lede">Primary sources first. SEC filings link to the original text on EDGAR (CIK 1100683).</p></div>
+<ol class="sources">
+<li id="src-1">Pets.com, Inc. — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000089161800000749/0000891618-00-000749.txt" target="_blank" rel="noopener">Final Prospectus (424B4)</a>, Feb 10, 2000.</li>
+<li id="src-2">Pets.com, Inc. — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000089161800002857/0000891618-00-002857.txt" target="_blank" rel="noopener">Form 10-Q, Q1 2000</a>, filed May 15, 2000.</li>
+<li id="src-3">Pets.com, Inc. — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000089161800004394/0000891618-00-004394.txt" target="_blank" rel="noopener">Form 10-Q, Q2 2000</a>, filed Aug 14, 2000.</li>
+<li id="src-4">Pets.com, Inc. — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000089161800005138/0000891618-00-005138.txt" target="_blank" rel="noopener">Form 10-Q, Q3 2000</a>, filed Nov 14, 2000.</li>
+<li id="src-5">Pets.com, Inc. — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000109581100004383/0001095811-00-004383.txt" target="_blank" rel="noopener">Form 8-K &amp; press release</a>, Nov 7, 2000.</li>
+<li id="src-6">IPET Holdings, Inc. — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000109581101002065/0001095811-01-002065.txt" target="_blank" rel="noopener">Form 10-K, FY2000</a> (incl. Ex. 10.47, PetSmart.com asset purchase agreement), filed Apr 2, 2001.</li>
+<li id="src-7">Pets.com, Inc. — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000089161800004116/0000891618-00-004116.txt" target="_blank" rel="noopener">Form 8-K, Petstore.com acquisition</a>, Jul 28, 2000.</li>
+<li id="src-8">IPET Holdings — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000109581101504828/0001095811-01-504828.txt" target="_blank" rel="noopener">Form 8-K, initial $0.09 distribution</a>, Sep 2001.</li>
+<li id="src-9">IPET Holdings — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000089161802004315/0000891618-02-004315.txt" target="_blank" rel="noopener">Form 8-K, $0.075 distribution</a>, Sep 2002.</li>
+<li id="src-10">IPET Holdings — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000095013404008643/0000950134-04-008643.txt" target="_blank" rel="noopener">Form 8-K, final $0.00747 distribution</a>, Jun 2004.</li>
+<li id="src-11">Los Angeles Times (wire services) — <a href="https://www.latimes.com/archives/la-xpm-2000-nov-08-fi-48684-story.html" target="_blank" rel="noopener">"Pets.com Rolls Over, Prepares to Shut Down"</a>, Nov 8, 2000.</li>
+<li id="src-12">CNET — <a href="https://www.cnet.com/tech/tech-industry/pets-com-ipo-is-a-dog/" target="_blank" rel="noopener">"Pets.com IPO is a dog"</a>, Feb 2000.</li>
+<li id="src-13">SFGATE — <a href="https://www.sfgate.com/tech/article/pets-dot-com-sock-puppet-look-back-18205346.php" target="_blank" rel="noopener">"Pets.com was an SF sensation. It collapsed months after going public."</a></li>
+<li id="src-14">Slate — <a href="https://slate.com/business/2000/06/the-puppet-that-ate-a-dot-com.html" target="_blank" rel="noopener">"The Puppet That Ate a Dot-Com"</a>, Jun 2000.</li>
+<li id="src-15">eCompany Now — <a href="https://web.archive.org/web/20010211182748/www.ecompany.com/articles/mag/print/0,1643,6586,00.html" target="_blank" rel="noopener">"That's One Sick Puppy"</a> (Internet Archive copy, Feb 2001).</li>
+<li id="src-16">Wikipedia — <a href="https://en.wikipedia.org/wiki/Pets.com" target="_blank" rel="noopener">"Pets.com"</a> (secondary; used only for the reported ~$1.2M Super Bowl ad cost and the ad agency credit).</li>
+<li id="src-17">AP via Los Angeles Times — <a href="https://www.latimes.com/archives/la-xpm-2002-jun-24-fi-sock24-story.html" target="_blank" rel="noopener">"Sock Puppet Finds a New Home"</a>, Jun 24, 2002.</li>
+<li id="src-18">1-800-Bar None — <a href="https://web.archive.org/web/20020602084525/www.barnone.com/sockpuppetrelease.htm" target="_blank" rel="noopener">press release</a>, May 9, 2002 (Internet Archive).</li>
+<li id="src-19">Chewy, Inc. — <a href="https://www.sec.gov/Archives/edgar/data/1766502/000176650225000013/chwyq42024exhibit991.htm" target="_blank" rel="noopener">Q4 &amp; FY2024 results (Ex. 99.1)</a>, Mar 26, 2025.</li>
+<li id="src-20">Recode via CNBC — <a href="https://www.cnbc.com/2017/04/18/petsmart-buys-chewy.html" target="_blank" rel="noopener">"PetSmart is acquiring Chewy.com for $3.35 billion"</a>, Apr 18, 2017.</li>
+<li id="src-21">Chewy, Inc. — <a href="https://investor.chewy.com/news-and-events/news/news-details/2019/Chewy-Announces-Pricing-of-Initial-Public-Offering/default.aspx" target="_blank" rel="noopener">"Chewy Announces Pricing of Initial Public Offering"</a>, Jun 2019.</li>
+<li id="src-22">Miami Herald via The Bulletin — <a href="https://bendbulletin.com/2017/03/09/pet-food-retailer-chewy-com-boasts-speedy-growth/" target="_blank" rel="noopener">"Pet food retailer Chewy.com boasts speedy growth"</a>, Mar 9, 2017.</li>
+<li id="src-23">SEC EDGAR — <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=1100683&amp;type=&amp;dateb=&amp;owner=include&amp;count=100" target="_blank" rel="noopener">IPET Holdings filing index</a> (Form 15-12G, Jun 3, 2005).</li>
+<li id="src-24">Pets.com, Inc. — <a href="https://www.sec.gov/Archives/edgar/data/1100683/000109581100005560/0001095811-00-005560.txt" target="_blank" rel="noopener">Definitive proxy statement (DEFS14A), plan of dissolution</a>, Dec 28, 2000.</li>
