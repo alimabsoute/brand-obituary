@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pets.com (1998–2000): A Post-Mortem · Brand Obituary</title>
+<meta name="description" content="A fully sourced post-mortem of Pets.com: the bubble, the sock puppet, the unit economics, the archived website and the 270 days after the IPO.">
+<meta property="og:title" content="Pets.com (1998–2000): A Post-Mortem · Brand Obituary">
+<meta property="og:description" content="A fully sourced post-mortem of Pets.com: the bubble, the sock puppet, the unit economics, the archived website and the 270 days after the IPO.">
+<meta name="theme-color" content="#fcfbf7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 fill=%22%23121212%22/%3E%3Crect x=%229%22 y=%2214%22 width=%2214%22 height=%222%22 fill=%22%23fcfbf7%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/roughjs@4.6.6/bundled/rough.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+<header class="mast"><div class="wrap">
+<a class="brand" href="/">Brand Obituary</a>
+<nav class="site" aria-label="Site"><a href="/">Index</a><a href="/pets-com/" class=on>Pets.com</a><a href="/webvan/">Webvan</a><a href="/radioshack/">RadioShack</a></nav>
+</div></header>
+<svg class="sockdefs" aria-hidden="true"><symbol id="sockSym" viewBox="0 0 300 380"><g fill="none" stroke="#1d1b18" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M92 372 L96 214 C88 160 96 108 138 84 C176 62 236 70 262 104 C282 130 276 160 252 170 L230 178 C222 200 214 214 206 226 L204 372" fill="#fbf9f5"/>
+<path d="M268 138 C250 152 222 160 196 162 C200 188 230 204 256 186 C268 176 272 154 268 138Z" fill="#a8321f" stroke-width="3"/><path d="M212 176 C222 192 240 194 250 184 C240 180 226 178 212 176Z" fill="#e8a0a8" stroke-width="2"/>
+<path d="M130 92 C104 96 88 130 98 168 C108 150 120 128 130 92Z" fill="#5c4a3b" stroke-width="2.4"/>
+<path d="M150 82 C126 54 92 40 70 54 C58 90 86 128 118 120" fill="#5c4a3b"/>
+<circle cx="178" cy="118" r="17" fill="#fbf9f5"/><circle cx="178" cy="118" r="10"/>
+<circle cx="174" cy="114" r="1.6" fill="#1d1b18"/><circle cx="182" cy="114" r="1.6" fill="#1d1b18"/><circle cx="174" cy="122" r="1.6" fill="#1d1b18"/><circle cx="182" cy="122" r="1.6" fill="#1d1b18"/>
+<ellipse cx="226" cy="108" rx="15" ry="20" fill="#5c4a3b" stroke-width="2.4"/>
+<circle cx="226" cy="108" r="9" fill="#fbf9f5"/><circle cx="223" cy="105" r="1.4" fill="#1d1b18"/><circle cx="229" cy="105" r="1.4" fill="#1d1b18"/><circle cx="223" cy="111" r="1.4" fill="#1d1b18"/><circle cx="229" cy="111" r="1.4" fill="#1d1b18"/>
+<path d="M262 104 C272 108 276 116 270 122 C262 124 256 118 258 110Z" fill="#1d1b18"/>
+<path d="M94 250 C130 262 172 262 206 250" stroke-width="10" stroke="#93743a"/>
+<rect x="138" y="244" width="30" height="26" rx="5" fill="#fbf9f5"/><circle cx="153" cy="257" r="8"/><path d="M153 252v5l4 3" stroke-width="2"/>
+<path d="M96 340 C130 350 172 350 204 340" stroke-dasharray="2 7"/>
+<path d="M96 356 C130 366 172 366 204 356" stroke-dasharray="2 7"/>
+<path d="M120 300 c6 -8 14 -8 20 0 M160 312 c5 -6 12 -6 17 0" stroke="#9a9184" stroke-width="2"/>
+</g></symbol></svg>
+<nav class="top" id="topnav"><div class="wrap">
+<a href="#bubble">The bubble</a><a href="#story">Story</a><a href="#website">The website</a><a href="#economics">Unit economics</a><a href="#marketing">Marketing</a><a href="#money">The money</a><a href="#map">Map</a><a href="#rivals">Rivals</a><a href="#timeline">Timeline</a><a href="#people">People</a><a href="#press">Press</a><a href="#cause">Cause of death</a><a href="#vs">vs. Chewy</a><a href="#homage">Homage</a><a href="#sources">Sources</a>
+</div></nav>
+<header class="hero"><div class="wrap">
+<div class="hero-grid">
+<div class="hero-text">
+<p class="kicker rv"><span class="tag">Dead</span>Online pet retail · San Francisco</p>
+<h1 class="name rv">Pets.com</h1>
+<p class="dates rv">Began operating Feb 17, 1999. Announced its wind-down Nov 7, 2000.</p>
+<p class="standfirst rv">The company’s slogan was “Because pets can’t drive.” Its business model didn’t get far either.</p>
+<p class="deck rv">It had the most famous mascot of the dot-com era, Amazon as its biggest shareholder, and a Super Bowl ad. In 270 days as a public company it never sold a single quarter’s goods for more than they cost to buy and ship. This is the full post-mortem, built from the company’s own SEC filings, contemporary press and the archived website.</p>
+<p class="byline rv">Brand Obituary desk · Every figure links to a numbered source · Speculation is labeled</p>
+</div>
+<figure class="hero-art rv"><svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Original line illustration of a sock puppet">
+<g fill="none" stroke="#1d1b18" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M92 372 L96 214 C88 160 96 108 138 84 C176 62 236 70 262 104 C282 130 276 160 252 170 L230 178 C222 200 214 214 206 226 L204 372" fill="#fbf9f5"/>
+<path d="M268 138 C250 152 222 160 196 162 C200 188 230 204 256 186 C268 176 272 154 268 138Z" fill="#a8321f" stroke-width="3"/><path d="M212 176 C222 192 240 194 250 184 C240 180 226 178 212 176Z" fill="#e8a0a8" stroke-width="2"/>
+<path d="M130 92 C104 96 88 130 98 168 C108 150 120 128 130 92Z" fill="#5c4a3b" stroke-width="2.4"/>
+<path d="M150 82 C126 54 92 40 70 54 C58 90 86 128 118 120" fill="#5c4a3b"/>
+<circle cx="178" cy="118" r="17" fill="#fbf9f5"/><circle cx="178" cy="118" r="10"/>
+<circle cx="174" cy="114" r="1.6" fill="#1d1b18"/><circle cx="182" cy="114" r="1.6" fill="#1d1b18"/><circle cx="174" cy="122" r="1.6" fill="#1d1b18"/><circle cx="182" cy="122" r="1.6" fill="#1d1b18"/>
+<ellipse cx="226" cy="108" rx="15" ry="20" fill="#5c4a3b" stroke-width="2.4"/>
+<circle cx="226" cy="108" r="9" fill="#fbf9f5"/><circle cx="223" cy="105" r="1.4" fill="#1d1b18"/><circle cx="229" cy="105" r="1.4" fill="#1d1b18"/><circle cx="223" cy="111" r="1.4" fill="#1d1b18"/><circle cx="229" cy="111" r="1.4" fill="#1d1b18"/>
+<path d="M262 104 C272 108 276 116 270 122 C262 124 256 118 258 110Z" fill="#1d1b18"/>
+<path d="M94 250 C130 262 172 262 206 250" stroke-width="10" stroke="#93743a"/>
+<rect x="138" y="244" width="30" height="26" rx="5" fill="#fbf9f5"/><circle cx="153" cy="257" r="8"/><path d="M153 252v5l4 3" stroke-width="2"/>
+<path d="M96 340 C130 350 172 350 204 340" stroke-dasharray="2 7"/>
+<path d="M96 356 C130 366 172 366 204 356" stroke-dasharray="2 7"/>
+<path d="M120 300 c6 -8 14 -8 20 0 M160 312 c5 -6 12 -6 17 0" stroke="#9a9184" stroke-width="2"/>
+</g></svg><figcaption>Original illustration in the spirit of the mascot. Not the trademarked character.</figcaption></figure>
+</div>
+<div class="hero-tables">
+<table class="kf rv"><caption>Table 1. The company in four numbers</caption><tbody><tr><td class="kv">$82.5M</td><td>raised in the Feb 11, 2000 IPO at $11 a share<sup class="fn"><a href="#src-1">1</a></sup></td></tr><tr><td class="kv">270 days</td><td>from IPO to the wind-down announcement<sup class="fn"><a href="#src-5">5</a></sup></td></tr><tr><td class="kv">$146.6M</td><td>cumulative net loss by Sep 30, 2000<sup class="fn"><a href="#src-4">4</a></sup></td></tr><tr><td class="kv">$0.172</td><td>total paid back per share in liquidation, 2001–04<sup class="fn"><a href="#src-8">8</a></sup><sup class="fn"><a href="#src-9">9</a></sup><sup class="fn"><a href="#src-10">10</a></sup></td></tr></tbody></table>
+<div class="findings rv"><h2 class="h-small">Key findings</h2><ol><li><b>It lost money before marketing.</b> Cost of goods sold, including shipping, was higher than sales in every quarter it reported. Its prospectus put shipping costs at 100–110% of revenue.<sup class="fn"><a href="#src-1">1</a></sup></li><li><b>It bought fame, not loyalty.</b> It spent $103.1M on marketing &amp; sales over six quarters against $31.6M in sales.<sup class="fn"><a href="#src-4">4</a></sup></li><li><b>It went public weeks before the crash.</b> The IPO priced on Feb 11, 2000. The Nasdaq peaked on Mar 10.<sup class="fn"><a href="#src-26">26</a></sup></li><li><b>No one would refinance it.</b> Fewer than 8 of the 50+ buyers and investors Merrill Lynch approached would even visit.<sup class="fn"><a href="#src-5">5</a></sup></li><li><b>The idea wasn’t wrong.</b> Chewy did $11.86B in sales in FY2024, built on subscriptions and positive gross margins.<sup class="fn"><a href="#src-19">19</a></sup></li></ol></div>
+</div>
+</div></header>
+
+<section id="bubble">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">01</span>The bubble it was born into</div><h2 class="rv">Born in a market that paid for losses</h2><p class="lede rv">Pets.com was founded and floated at the peak of the dot-com bubble. In 1999 investors were buying unprofitable IPOs at a rate never seen before or since.</p></div>
+<table class="kf compact rv"><caption>Table 2. The market Pets.com was born into</caption><tbody><tr><td class="kv">476</td><td>U.S. IPOs in 1999<sup class="fn"><a href="#src-25">25</a></sup></td></tr><tr><td class="kv">71.2%</td><td>average first-day gain for a 1999 IPO, up from 21.9% in 1998<sup class="fn"><a href="#src-25">25</a></sup></td></tr><tr><td class="kv">76%</td><td>of 1999 IPOs had negative trailing earnings. In 2000 it was 81%<sup class="fn"><a href="#src-25">25</a></sup></td></tr><tr><td class="kv">$19.9B</td><td>of 1999 venture money went to Internet companies, up from $3.4B in 1998<sup class="fn"><a href="#src-27">27</a></sup></td></tr></tbody></table><div class="card rv">
+<div class="card-head"><div><h3>The IPO window, 1990–2003</h3><p>The number of U.S. IPOs each year, against the average first-day return or the share of IPOs that were losing money.</p></div>
+<div class="seg" id="ipoSeg"><button class="on" data-v="ret">First-day return</button><button data-v="neg">% unprofitable</button></div></div>
+<div class="cbox"><canvas id="ipoChart"></canvas></div>
+<div class="src">Source: Jay R. Ritter, “Initial Public Offerings: Updated Statistics,” University of Florida, Tables 1 and 9<sup class="fn"><a href="#src-25">25</a></sup>. The “% unprofitable” series is the share of IPOs with negative trailing-12-month EPS.</div>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>The Nasdaq Composite, with Pets.com’s life marked</h3><p>Daily closes are sampled weekly. Hover over a marker for the event.</p></div></div>
+<div class="cbox"><canvas id="nasdaqChart"></canvas></div>
+<div class="src">Index data: NASDAQ OMX Group via FRED, series NASDAQCOM<sup class="fn"><a href="#src-26">26</a></sup>. Events: SEC filings<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-5">5</a></sup><sup class="fn"><a href="#src-6">6</a></sup>. Peak close: 5,048.62 on Mar 10, 2000.</div>
+</div>
+</div>
+</section>
+
+<section id="story" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">02</span>The story</div><h2 class="rv">A sock puppet, a Super Bowl and negative gross margins</h2><p class="lede rv">Pets.com didn’t die because nobody had heard of it. Everybody had. It died because every box it shipped lost money, and the cash ran out before that changed.</p></div>
+<div class="story">
+<div class="stage" id="stage">
+<div class="chap-n" id="stN">Chapter 1 of 5</div>
+<div class="big" id="stBig" style="color:#4f7a4a">$109.2M</div>
+<div class="cap" id="stCap">raised privately in 1999 across three preferred stock rounds</div>
+<div class="bar"><span id="stBar" style="width:20%"></span></div>
+<svg class="sock" id="sock" viewBox="0 0 300 380"><use href="#sockSym"/></svg>
+</div>
+<div class="chapters">
+<article class="chap" data-n="01" data-big="$109.2M" data-cap="raised privately in 1999 across three preferred stock rounds" data-bar="20" data-color="#4f7a4a">
+<div class="when">1998 – 1999 · Birth</div>
+<h3>An Amazon-backed bet on the pet aisle</h3>
+<p>Pets.com was incorporated in California on October 7, 1998. It began operating on February 17, 1999, when it bought the Pets.com domain and a web store from a third party.<sup class="fn"><a href="#src-1">1</a></sup> An archived page from May 1999 still described the site as “a division of WebMagic™… headed by Greg McLemore.”<sup class="fn"><a href="#src-36">36</a></sup> Julie Wainwright, who had just been CEO of Reel.com, took over as CEO in March 1999.<sup class="fn"><a href="#src-1">1</a></sup></p>
+<p>Money arrived fast: a $10.0M Series A in April, a $50.0M Series B in June and another $49.2M in November–December.<sup class="fn"><a href="#src-1">1</a></sup> Just before the IPO, Amazon.com owned <b>40.7%</b> of the company and Hummer Winblad Venture Partners 21.2%.<sup class="fn"><a href="#src-1">1</a></sup> Headcount went from 4 people in March 1999 to 270 by December.<sup class="fn"><a href="#src-1">1</a></sup></p>
+</article>
+<article class="chap" data-n="02" data-big="$5.94" data-cap="spent on marketing &amp; sales for every $1 of revenue in Q4 1999" data-bar="40" data-color="#93743a">
+<div class="when">Aug 1999 – Jan 2000 · The sock</div>
+<h3>The mascot that outlived the company</h3>
+<p>TBWA&#92;Chiat&#92;Day<sup class="fn"><a href="#src-16">16</a></sup> created a wisecracking sock puppet, performed by comedian Michael Ian Black.<sup class="fn"><a href="#src-13">13</a></sup> It floated as a 36-foot balloon in the 1999 Macy’s Thanksgiving Day Parade<sup class="fn"><a href="#src-13">13</a></sup>, did Good Morning America and Time<sup class="fn"><a href="#src-14">14</a></sup>, and on January 30, 2000 got its own Super Bowl XXXIV spot, a buy widely reported at about $1.2 million.<sup class="fn"><a href="#src-16">16</a></sup></p>
+<p>The filings show the bill. Advertising expense alone was <b>$26.9M</b> from inception to December 31, 1999<sup class="fn"><a href="#src-1">1</a></sup>. In Q4 1999, marketing &amp; sales was <b>$30.7M</b> against <b>$5.2M</b> in net sales.<sup class="fn"><a href="#src-2">2</a></sup></p>
+<div class="pull">“The company spent a hideous amount of money to reach a lot of customers… who adore the ads but don’t have pets.”<small>eCompany Now, early 2001<sup class="fn"><a href="#src-15">15</a></sup></small></div>
+</article>
+<article class="chap" data-n="03" data-big="$11.00" data-cap="IPO price on Feb 11, 2000 (Nasdaq: IPET). The high for the quarter was $14.00" data-bar="60" data-color="#1d1b18">
+<div class="when">Feb 11, 2000 · The IPO</div>
+<h3>Public, four weeks before the top</h3>
+<p>Merrill Lynch led the sale of 7.5 million shares at $11, raising $82.5M gross and about $75.3M net.<sup class="fn"><a href="#src-6">6</a></sup> The stock opened at $13½ and was back near $11 by midday. CNET’s headline was “Pets.com IPO is a dog.”<sup class="fn"><a href="#src-12">12</a></sup></p>
+<p>On March 10 the Nasdaq closed at its all-time bubble high.<sup class="fn"><a href="#src-26">26</a></sup> The prospectus had already warned that the company might “provide our customers with shipping below our actual costs to attract customers.”<sup class="fn"><a href="#src-1">1</a></sup></p>
+</article>
+<article class="chap" data-n="04" data-big="$0.22" data-cap="closing price on Nov 7, 2000, down 98% from the IPO price" data-bar="85" data-color="#a8321f">
+<div class="when">Mar – Nov 2000 · Collapse</div>
+<h3>“Fewer than 8 were even prepared to visit”</h3>
+<p>Cutting marketing narrowed the losses, from $39.1M in Q1 2000 to $21.7M in Q3. Gross margin improved from −64% to −3% once the Indianapolis-area warehouse took over its share of shipping.<sup class="fn"><a href="#src-4">4</a></sup> But by September 30 only $23.1M in cash was left.<sup class="fn"><a href="#src-4">4</a></sup> In July it absorbed rival Petstore.com in an all-stock deal that brought in just $3M of cash.<sup class="fn"><a href="#src-7">7</a></sup></p>
+<p>Merrill Lynch approached more than 50 potential buyers and investors. “Out of the more than 50 prospects contacted, fewer than 8 were even prepared to visit with the company.”<sup class="fn"><a href="#src-5">5</a></sup> On November 7, 2000, about 255 of the 320 employees were laid off.<sup class="fn"><a href="#src-5">5</a></sup></p>
+</article>
+<article class="chap" data-n="05" data-big="$0.172" data-cap="total liquidation payout per share, 2001–2004, on an $11 IPO price" data-bar="100" data-color="#a8321f">
+<div class="when">2000 – 2005 · The estate</div>
+<h3>Sold for parts</h3>
+<p>The site stopped taking orders at 11am Pacific on November 9, 2000.<sup class="fn"><a href="#src-36">36</a></sup> PetSmart.com paid <b>$375,000</b> for the domain names and related IP. The sock puppet was explicitly excluded from the deal.<sup class="fn"><a href="#src-6">6</a></sup> In its December proxy, the board estimated stockholders might receive “up to approximately $0.25 per share.”<sup class="fn"><a href="#src-24">24</a></sup></p>
+<p>They got less. Three liquidating distributions followed: $0.09 in 2001, $0.075 in 2002 and a final $0.00747 in 2004.<sup class="fn"><a href="#src-8">8</a></sup><sup class="fn"><a href="#src-9">9</a></sup><sup class="fn"><a href="#src-10">10</a></sup></p>
+</article>
+</div></div></div>
+</section>
+<section id="website">
+<div class="wrap">
