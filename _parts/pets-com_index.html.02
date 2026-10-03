@@ -1,0 +1,150 @@
+<div class="src">Ratios: Q4 1999 COGS 224% and M&amp;S 594% of sales<sup class="fn"><a href="#src-2">2</a></sup>. Q3 2000 COGS 103% and M&amp;S 157%<sup class="fn"><a href="#src-4">4</a></sup>. The S-1 target is 22.5% shipping plus 77.5% product cost, with no stated marketing ratio<sup class="fn"><a href="#src-1">1</a></sup>. M&amp;S includes distribution and fulfillment costs, not just advertising.</div>
+</div>
+</div>
+<div class="g2" style="margin-top:26px">
+<div class="card rv bagcard">
+<svg class="bag" viewBox="0 0 160 220" aria-label="Illustration of a large kibble bag">
+<path d="M28 30 L132 30 L142 205 Q80 214 18 205 Z" fill="#efe6d6" stroke="#1d1b18" stroke-width="3"/>
+<path d="M28 30 Q40 18 52 30 Q64 18 80 30 Q96 18 108 30 Q120 18 132 30" fill="none" stroke="#1d1b18" stroke-width="3"/>
+<rect x="38" y="70" width="84" height="56" fill="#a8321f"/><text x="80" y="96" text-anchor="middle" font-family="Fraunces,serif" font-size="22" fill="#fff" font-weight="600">KIBBLE</text><text x="80" y="116" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" letter-spacing="1">BULK · HEAVY</text>
+<g fill="#93743a"><circle cx="58" cy="160" r="6"/><circle cx="76" cy="168" r="6"/><circle cx="94" cy="158" r="6"/><circle cx="104" cy="176" r="6"/><circle cx="66" cy="180" r="6"/></g>
+</svg>
+<div><h3 style="font-size:22px;margin-bottom:6px">Why shipping was the problem</h3>
+<p style="font-size:16px;color:var(--ink2)">The prospectus put shipping at <b>100–110% of revenue</b><sup class="fn"><a href="#src-1">1</a></sup>, before the cost of the food itself. Gross margin was <b>−64%</b> in Q1 2000 and <b>−20%</b> in Q2. It only reached <b>−3%</b> in Q3, “as our second distribution center in Indianapolis reached its full load.”<sup class="fn"><a href="#src-4">4</a></sup> When PETsMART.com took over the customers, its coupon excluded dog food, cat food and litter from the $25 minimum.<sup class="fn"><a href="#src-36">36</a></sup></p>
+<p style="font-family:var(--sans);font-size:12.5px;color:var(--mute)">We found no primary source for the often-repeated story of a specific 40-lb bag being sold at a set loss, so we don’t print one.</p></div>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>Customers grew, and kept coming back</h3><p>Cumulative customers (bars) and the share of orders from repeat customers (line).</p></div></div>
+<div class="cbox"><canvas id="custChart"></canvas></div>
+<div class="src">10-Q filings and the Nov 7, 2000 press release<sup class="fn"><a href="#src-2">2</a></sup><sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-5">5</a></sup>. Repeat rates were reported as “more than” 50% (Q1 ’00) and 59% (Q2 ’00). Nov 2000 is “approximately 570,000”, and no repeat rate was given for it.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="marketing">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">05</span>The marketing machine</div><h2 class="rv">Famous first, profitable never</h2><p class="lede rv">Pets.com spent more on marketing &amp; sales than it took in from sales in every quarter it reported. At the peak, it spent $5.94 for every dollar of revenue.</p></div>
+<div class="card rv">
+<div class="card-head"><div><h3>The quarterly P&amp;L</h3><p>Net sales against cost of goods, marketing &amp; sales, and net loss, in $ thousands.</p></div>
+<div class="seg" id="plSeg"><button class="on" data-v="abs">$ thousands</button><button data-v="ratio">Per $1 of sales</button></div></div>
+<div class="cbox tall"><canvas id="plChart"></canvas></div>
+<div class="src">S-1/424B4<sup class="fn"><a href="#src-1">1</a></sup> and 10-Qs<sup class="fn"><a href="#src-2">2</a></sup><sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-4">4</a></sup>. *Q2 ’99 runs from inception (Feb 17) to Jun 30, 1999. Its marketing &amp; sales figure is derived from period totals.</div>
+</div>
+<div class="g3" style="margin-top:26px">
+<div class="card rv">
+<div class="card-head"><div><h3>1999 marketing &amp; sales mix</h3><p>Feb 17 – Dec 31, 1999. Total: $42.5M.</p></div></div>
+<div class="cbox" style="height:240px"><canvas id="mixChart"></canvas></div>
+<div class="src">Advertising expense of $26.934M is from the S-1 notes<sup class="fn"><a href="#src-1">1</a></sup>. “Other” ($15.56M, derived) covers the rest of marketing &amp; sales, including fulfillment and distribution.</div>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>Marketing per new customer</h3><p>Quarterly M&amp;S ÷ net new customers (derived).</p></div></div>
+<table class="kf compact rv"><caption>Marketing &amp; sales per net new customer (derived)</caption><tbody><tr><td class="kv">≈$240</td><td>Q1 2000: $28.9M M&amp;S, 120K net new</td></tr><tr><td class="kv">≈$95</td><td>Q2 2000: $17.1M M&amp;S, 179K net new</td></tr></tbody></table><p style="font-family:var(--sans);font-size:13px;color:var(--mute);margin-top:12px">This overstates acquisition cost, because M&amp;S also pays for distribution and serves existing customers. Q4 ’99 can’t be computed because no Sep 30, 1999 customer count was published.<sup class="fn"><a href="#src-2">2</a></sup><sup class="fn"><a href="#src-3">3</a></sup></p>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>The media deals</h3><p>Advertising, partly paid for in stock.</p></div></div>
+<ul style="list-style:none;font-family:var(--sans);font-size:14px;line-height:1.5">
+<li style="padding:8px 0;border-bottom:1px solid var(--rule2)"><b>Disney / ABC:</b> 1,378,000 Series C shares issued on Jan 18, 2000 for ABC network airtime valued at $11.02M.<sup class="fn"><a href="#src-1">1</a></sup></li>
+<li style="padding:8px 0;border-bottom:1px solid var(--rule2)"><b>GO Network:</b> a commitment to buy at least $9M of online ads. It was later disputed and terminated.<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-6">6</a></sup></li>
+<li style="padding:8px 0;border-bottom:1px solid var(--rule2)"><b>Amazon.com:</b> an advertising agreement dated Apr 22, 1999, running to Oct 2000.<sup class="fn"><a href="#src-1">1</a></sup></li>
+<li style="padding:8px 0"><b>Super Bowl XXXIV</b> (ABC, Jan 30, 2000): the sock puppet’s spot, widely reported at about $1.2M (secondary source).<sup class="fn"><a href="#src-38">38</a></sup></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="money" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">06</span>The money</div><h2 class="rv">Who owned it, and how fast the cash went</h2><p class="lede rv">Pets.com raised about $188M in cash in under 20 months. Amazon was its largest owner. At the rate the company lost money, the tank never held more than about two quarters of runway.</p></div>
+<div class="card rv">
+<div class="card-head"><div><h3>The cap table after the IPO</h3><p>Beneficial ownership on 29,544,737 shares outstanding after the offering. Hover over or tap a holder.</p></div></div>
+<div class="cap-wrap">
+<div class="cbox" style="height:320px"><canvas id="capChart"></canvas></div>
+<div class="cap-list" id="capList"></div>
+</div>
+<div class="src">424B4 prospectus, principal stockholders table<sup class="fn"><a href="#src-1">1</a></sup>. Percentages are beneficial ownership and include exercisable options, so they don’t sum exactly. “IPO public float” (7.5M shares) and “All other holders” are derived. Catalyst Investments is a Disney affiliate. Before the IPO, Amazon held 40.7%.</div>
+</div>
+<div class="card rv" style="margin-top:26px">
+<div class="card-head"><div><h3>The runway countdown</h3><p>Cash and equivalents at each quarter end, and how many quarters that cash would last at the quarter’s net loss rate.</p></div></div>
+<div class="runway" id="runway">
+<div class="rw" data-cash="30.2" data-q="0.71"><div class="q">Dec 31, 1999</div><div class="cash">$30.2M</div><div class="tank"><span class="lvl" style="height:0"></span></div><div class="m"><b>0.7 qtrs</b> at the Q4 ’99 loss of $42.4M</div></div>
+<div class="rw" data-cash="70.1" data-q="1.79"><div class="q">Mar 31, 2000</div><div class="cash">$70.1M</div><div class="tank"><span class="lvl" style="height:0"></span></div><div class="m"><b>1.8 qtrs</b> after the IPO, at the Q1 loss of $39.1M</div></div>
+<div class="rw" data-cash="37.2" data-q="1.55"><div class="q">Jun 30, 2000</div><div class="cash">$37.2M</div><div class="tank"><span class="lvl" style="height:0"></span></div><div class="m"><b>1.5 qtrs</b> at the Q2 loss of $24.1M</div></div>
+<div class="rw" data-cash="23.1" data-q="1.06"><div class="q">Sep 30, 2000</div><div class="cash">$23.1M</div><div class="tank"><span class="lvl" style="height:0"></span></div><div class="m"><b>1.1 qtrs</b> at the Q3 loss of $21.7M. <span style="color:var(--red)">Shut down 38 days later.</span></div></div>
+</div>
+<div class="src">Cash figures are from the balance sheets in the S-1 and 10-Qs<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-2">2</a></sup><sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-4">4</a></sup>. Runway (derived) = cash ÷ that quarter’s net loss. Net loss includes non-cash charges, so actual cash burn was somewhat lower. Tanks are drawn against the $70.1M peak.</div>
+</div>
+<div class="g2" style="margin-top:26px">
+<div class="card rv">
+<div class="card-head"><div><h3>IPET vs. the Nasdaq</h3><p>Both indexed to 100 on IPO day, Feb 11, 2000. Shaded bars show IPET’s quarterly high–low range.</p></div>
+<div class="seg" id="stkSeg"><button class="on" data-v="lin">Linear</button><button data-v="log">Log</button></div></div>
+<div class="cbox"><canvas id="stkChart"></canvas></div>
+<div class="src">IPET closes are from the 8-K, 10-K and press coverage<sup class="fn"><a href="#src-5">5</a></sup><sup class="fn"><a href="#src-6">6</a></sup><sup class="fn"><a href="#src-11">11</a></sup>, and the quarterly ranges from the 10-K<sup class="fn"><a href="#src-6">6</a></sup>. No daily IPET series was available, so IPET is plotted only at the dates we could source. Nasdaq data is from FRED<sup class="fn"><a href="#src-26">26</a></sup>.</div>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>Headcount</h3><p>Employees at each reported date.</p></div></div>
+<div class="cbox"><canvas id="hcChart"></canvas></div>
+<div class="src">S-1<sup class="fn"><a href="#src-1">1</a></sup>, Nov 7, 2000 release (320 employees, ~255 laid off)<sup class="fn"><a href="#src-5">5</a></sup>, and 10-K (26 at Dec 31, 2000; all remaining employees resigned Jan 16, 2001)<sup class="fn"><a href="#src-6">6</a></sup>.</div>
+</div>
+</div>
+<div class="g2" style="margin-top:26px">
+<div class="card rv">
+<div class="card-head"><div><h3>Capital in vs. losses out</h3><p>$ millions, from founding to Sep 30, 2000.</p></div></div>
+<div class="cbox"><canvas id="capLossChart"></canvas></div>
+<div class="src">Private rounds of $109.2M and net IPO proceeds of $75.3M<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-6">6</a></sup>, plus $3M cash from the Petstore.com deal<sup class="fn"><a href="#src-7">7</a></sup>. Cumulative net loss through Q3 2000 was $146.6M (sum of quarters)<sup class="fn"><a href="#src-4">4</a></sup>. The Disney/ABC airtime ($11.0M) was paid in stock and is excluded.</div>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>What a share was worth</h3><p>IPO price, the board’s liquidation estimate, and what stockholders actually got back.</p></div></div>
+<div class="payout" id="payout">
+<div class="coin"><div class="disc" data-s="160" style="width:160px;height:160px"></div><b>$11.00</b><span>IPO price, Feb 11, 2000<sup class="fn"><a href="#src-1">1</a></sup></span></div>
+<div class="coin"><div class="disc small" data-s="24" style="width:24px;height:24px"></div><b>~$0.25</b><span>“up to approximately” per share, proxy of Dec 28, 2000<sup class="fn"><a href="#src-24">24</a></sup></span></div>
+<div class="coin"><div class="disc small" data-s="20" style="width:20px;height:20px"></div><b>$0.172</b><span>actual total of three distributions, 2001–04<sup class="fn"><a href="#src-8">8</a></sup><sup class="fn"><a href="#src-9">9</a></sup><sup class="fn"><a href="#src-10">10</a></sup></span></div>
+</div>
+<div class="src">Coin areas are proportional to value.</div>
+</div>
+</div>
+</div>
+</section>
+<section id="map">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">07</span>The map</div><h2 class="rv">Where Pets.com operated, and who surrounded it</h2><p class="lede rv">Pets.com ran its business from two warehouses, one in the Bay Area and one in Indiana. Its rivals and the retail chains behind them were mostly a few hours’ drive away in California.</p></div>
+<figure class="map-fig rv">
+<div class="card-head"><div><h3 data-n="1">Pets.com, its rivals and its backers, 1999–2000</h3><p><b>What this map shows:</b> where each organization in this story was based. Numbered pins match the key below, and the handwritten notes explain why each place matters.</p></div></div>
+<div class="map-legend"><span><span class="lg-pin" style="background:var(--p-pets)"></span>Pets.com sites</span><span><span class="lg-pin" style="background:var(--p-riv)"></span>Rival pet e-tailers</span><span><span class="lg-pin" style="background:var(--p-back)"></span>Investors, underwriter and retail parents</span><span><span class="lg-ring"></span>1,000 miles from a warehouse (illustrative)</span></div>
+<div class="mapbox" style="margin-top:12px"><svg class="base" id="usBase" viewBox="0 0 975 610" aria-hidden="true" style="display:block;width:100%;height:auto"></svg><svg class="ov" id="mapOv" viewBox="0 0 975 610"></svg></div>
+<div class="notes-m" id="notesUS"></div>
+<ol class="map-key" id="keyUS"></ol>
+<figcaption>Pins are placed at city level, and some are nudged apart so they don’t overlap. A thin line joins a moved pin to its true location. Dashed rings show straight-line distance only. They aren’t carrier shipping zones, which the filings don’t disclose. Sources are given in the key. Base map: U.S. Census Bureau via us-atlas<sup class="fn"><a href="#src-39">39</a></sup>.</figcaption>
+</figure>
+<div class="bay-grid">
+<figure class="map-fig rv" style="margin-top:0">
+<div class="card-head"><div><h3 data-n="2">The Bay Area footprint</h3><p><b>What this map shows:</b> every San Francisco Bay Area address from Pets.com’s lease filings, plus rival Petstore.com.</p></div></div>
+<div class="mapbox"><img src="/pets-com/map-bay.svg" alt="Map of the San Francisco Bay Area with lettered pins for Pets.com offices and warehouses" loading="lazy" width="600" height="520"><svg class="ov" id="bayOv" viewBox="0 0 600 520"></svg></div>
+<div class="notes-m" id="notesBay"></div>
+<ol class="map-key" id="keyBay" style="grid-template-columns:1fr"></ol>
+<figcaption>Street-level positions are approximate. Petopia’s San Francisco address wasn’t found in our sources, so it isn’t pinned. Leases are from the S-1 and 10-K exhibits<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-6">6</a></sup>.</figcaption>
+</figure>
+<div class="rv">
+<table class="cmp" style="font-size:13.5px;margin-top:0">
+<caption style="caption-side:top;text-align:left;font-family:var(--sans);font-size:13px;font-weight:600;padding-bottom:8px">Table 3. Pets.com leases in the filings</caption>
+<tr><th>Site</th><th>Use</th><th>Lease</th></tr>
+<tr><td>435 Brannan St, SF</td><td>Offices (S-1 address)</td><td>Apr 8, 1999</td></tr>
+<tr><td>945 Bryant St, SF</td><td>Offices</td><td>Sep 20, 1999</td></tr>
+<tr><td>150–160 King St, SF</td><td>Warehouse</td><td>Sep 27, 1999</td></tr>
+<tr><td>33201 Dowe Ave, Union City</td><td>Distribution center, 143,232 sq ft</td><td>Sublease, Jul 1, 1999</td></tr>
+<tr><td>1035 Whipple Rd, Hayward</td><td>Satellite facility, 84,000 sq ft</td><td>Nov 5, 1999</td></tr>
+<tr><td>Greenwood, Indiana</td><td>Second distribution center</td><td>Dec 7, 1999</td></tr>
+</table>
+<p class="note">In 2000 the company said it had moved headquarters to a “new, larger facility”.<sup class="fn"><a href="#src-4">4</a></sup> We couldn’t confirm the address, so only leased addresses are shown. After dissolution, the company’s address was Diablo Management Group in Danville, CA.<sup class="fn"><a href="#src-6">6</a></sup></p>
+</div></div>
+</div>
+</section>
+
+<section id="rivals" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">08</span>The rivals</div><h2 class="rv">The dot-com pet cemetery</h2><p class="lede rv">Pets.com was not alone. In 1999 at least three other venture-funded pet e-tailers were chasing the same customers, and none survived as independents.</p></div>
+<div class="tbl-scroll rv"><table class="cmp">
+<tr><th>Company</th><th>Base</th><th>Backers</th><th>Money raised</th><th>Fulfillment</th><th>Fate</th></tr>
+<tr class="me"><td>Pets.com</td><td>San Francisco</td><td>Amazon, Hummer Winblad, Disney</td><td>$109.2M private, plus an $82.5M IPO<sup class="fn"><a href="#src-1">1</a></sup></td><td>Own DCs: Union City, CA and Greenwood, IN<sup class="fn"><a href="#src-6">6</a></sup></td><td>Shut down Nov 2000. Liquidated</td></tr>
+<tr><td>Petopia</td><td>San Francisco</td><td>Petco, VCs</td><td>$66M (Jul ’99) + $35M (Dec ’99)<sup class="fn"><a href="#src-28">28</a></sup></td><td>Petco distribution centers<sup class="fn"><a href="#src-28">28</a></sup></td><td>Laid off staff in Oct 2000. Assets sold to Petco Dec 2000<sup class="fn"><a href="#src-30">30</a></sup>. Cancelled a $100M IPO in Feb 2001<sup class="fn"><a href="#src-29">29</a></sup></td></tr>
+<tr><td>Petstore.com</td><td>Emeryville, CA</td><td>Discovery Communications, VCs</td><td>$97M second round (Nov ’99)<sup class="fn"><a href="#src-31">31</a></sup></td><td>Not found in sources</td><td>Sold to Pets.com Jul 2000 for 5.8M shares plus preferred stock<sup class="fn"><a href="#src-7">7</a></sup></td></tr>
