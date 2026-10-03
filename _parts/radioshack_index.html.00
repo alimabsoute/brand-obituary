@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RadioShack (1921–2015, and after): A Post-Mortem · Brand Obituary</title>
+<meta name="description" content="A fully sourced post-mortem of RadioShack: store counts, sales and debt from the 10-Ks, two bankruptcies, the archived website and the brand that keeps changing hands.">
+<meta property="og:title" content="RadioShack (1921–2015, and after): A Post-Mortem · Brand Obituary">
+<meta property="og:description" content="A fully sourced post-mortem of RadioShack: store counts, sales and debt from the 10-Ks, two bankruptcies, the archived website and the brand that keeps changing hands.">
+<meta name="theme-color" content="#fcfbf7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 fill=%22%23121212%22/%3E%3Crect x=%229%22 y=%2214%22 width=%2214%22 height=%222%22 fill=%22%23fcfbf7%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/roughjs@4.6.6/bundled/rough.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+<header class="mast"><div class="wrap">
+<a class="brand" href="/">Brand Obituary</a>
+<nav class="site" aria-label="Site"><a href="/">Index</a><a href="/pets-com/">Pets.com</a><a href="/webvan/">Webvan</a><a href="/radioshack/" class=on>RadioShack</a></nav>
+</div></header>
+<nav class="top" id="topnav"><div class="wrap">
+<a href="#context">Before</a><a href="#story">Story</a><a href="#website">The website</a><a href="#economics">Store economics</a><a href="#marketing">Marketing</a><a href="#money">The money</a><a href="#map">Map</a><a href="#rivals">Rivals</a><a href="#timeline">Timeline</a><a href="#people">People</a><a href="#press">Press</a><a href="#cause">Cause of death</a><a href="#fork">What if</a><a href="#homage">Homage</a><a href="#now">Afterlife</a><a href="#sources">Sources</a>
+</div></nav>
+<header class="hero"><div class="wrap">
+<div class="hero-grid">
+<div class="hero-text">
+<p class="kicker rv"><span class="tag ghost">Ghost</span>Electronics retail · Fort Worth, Texas</p>
+<h1 class="name rv">RadioShack</h1>
+<p class="dates rv">Founded in Boston in 1921. Filed for Chapter 11 on February 5, 2015. The name is still for sale on shelves.</p>
+<p class="standfirst rv">For decades RadioShack was the store within a short drive of almost every American, selling batteries, cables and a part for anything. It kept the stores long after the reason to visit them had moved online and into phone carriers’ hands.</p>
+<p class="deck rv">At its peak in 2001 it ran 5,289 company stores in the U.S. and about 2,100 more dealer outlets. By 2013 it had lost $400.2M in a year, and its stockholders’ equity had fallen by four-fifths in four years. Two bankruptcies later the brand belongs to a Central American retailer and lives on through dealer stores and a website. This post-mortem is built from 20 years of RadioShack’s 10-Ks, its bankruptcy filings, contemporary press and the archived website.</p>
+<p class="byline rv">Brand Obituary desk · Every figure links to a numbered source · Derived figures and estimates are labeled</p>
+</div>
+<figure class="hero-art rv"><svg viewBox="0 0 300 220" role="img" aria-label="Line drawing of a cabinet of small parts drawers"><g fill="none" stroke="#1d1b18" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="40" y="24" width="220" height="168" rx="3"/><path d="M40 66 H260 M40 108 H260 M40 150 H260 M95 24 V192 M150 24 V192 M205 24 V192"/><path d="M58 50 h20 M113 50 h20 M168 50 h20 M223 50 h20 M58 92 h20 M168 92 h20 M223 92 h20 M58 134 h20 M113 134 h20 M223 134 h20 M58 176 h20 M113 176 h20 M168 176 h20 M223 176 h20"/><path d="M28 192 H272"/></g><g fill="none" stroke="#a8321f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M104 96 h38 v28 h-38 z" fill="#fcfbf7"/><path d="M104 96 l6 -10 h38 l-6 10"/><path d="M148 86 v28 l-6 10"/><path d="M114 110 h4 m4 0 h4 m4 0 h4"/></g><text x="150" y="214" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#5c5c5c">Resistors, 1/4 W, drawer 3</text></svg><figcaption>Original illustration. Not the RadioShack logo or trade dress.</figcaption></figure>
+</div>
+<div class="hero-tables">
+<table class="kf rv"><caption>Table 1. The company in four numbers</caption><tbody><tr><td class="kv">5,289</td><td>company-operated U.S. stores at the end of 2001, the peak<sup class="fn"><a href="#src-6">6</a></sup></td></tr><tr><td class="kv">$5.08B</td><td>net sales and operating revenues in 2005, the highest as RadioShack Corporation<sup class="fn"><a href="#src-9">9</a></sup></td></tr><tr><td class="kv">−$400.2M</td><td>net loss in 2013, after a $139.4M loss in 2012<sup class="fn"><a href="#src-13">13</a></sup></td></tr><tr><td class="kv">1,743</td><td>stores sold to a Standard General affiliate in the April 2015 bankruptcy sale. The rest closed<sup class="fn"><a href="#src-16">16</a></sup><sup class="fn"><a href="#src-21">21</a></sup></td></tr></tbody></table>
+<div class="findings rv"><h2 class="h-small">Key findings</h2><ol><li><b>The footprint outlived the business.</b> Company stores peaked at 5,289 in 2001 and were still 4,297 at the end of 2013, while sales per store fell by about a fifth between 2005 and 2013 (derived).<sup class="fn"><a href="#src-6">6</a></sup><sup class="fn"><a href="#src-13">13</a></sup></li><li><b>Phones became half the company, on someone else’s terms.</b> Wireless was 28.7% of sales in 2003 and the mobility platform 52.4% in 2013. In 2013 the 10-K blamed falling postpaid phone sales and rising handset costs for a “substantial decrease” in gross profit.<sup class="fn"><a href="#src-9">9</a></sup><sup class="fn"><a href="#src-13">13</a></sup></li><li><b>Margins went first.</b> Gross margin was 50.3% in 2004. By our calculation from the 10-K it was 34.1% in 2013.<sup class="fn"><a href="#src-8">8</a></sup><sup class="fn"><a href="#src-13">13</a></sup></li><li><b>The cash ran out quickly at the end.</b> Cash fell from $908.2M at the end of 2009 to $43.3M by November 1, 2014. Chapter 11 followed three months later.<sup class="fn"><a href="#src-14">14</a></sup><sup class="fn"><a href="#src-15">15</a></sup></li><li><b>The name never died.</b> It has since passed through a hedge-fund affiliate, a second bankruptcy, an e-commerce roll-up that used it for a crypto token, and a Salvadoran retailer that has been a franchisee since 1998.<sup class="fn"><a href="#src-26">26</a></sup><sup class="fn"><a href="#src-28">28</a></sup><sup class="fn"><a href="#src-30">30</a></sup></li></ol></div>
+</div>
+</div></header>
+
+<section id="context">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">01</span>Before the fall</div><h2 class="rv">A parts store that became a computer company, then a phone store</h2><p class="lede rv">RadioShack wasn’t born in a bubble. It was a 1921 Boston radio-parts shop that a Fort Worth leather company turned into a national electronics chain. Its trouble began when the things people needed from it stopped being small parts.</p></div>
+<table class="kf compact rv"><caption>Table 2. The chain before the decline</caption><tbody><tr><td class="kv">1921</td><td>founded in Boston by brothers Theodore and Milton Deutschmann, according to the brand’s later owner<sup class="fn"><a href="#src-28">28</a></sup></td></tr><tr><td class="kv">1963</td><td>Tandy Corporation of Fort Worth bought the struggling chain and made it profitable within two years<sup class="fn"><a href="#src-18">18</a></sup></td></tr><tr><td class="kv">7,000+</td><td>locations by 1988, counting company stores and dealers<sup class="fn"><a href="#src-18">18</a></sup></td></tr><tr><td class="kv">~43,600</td><td>employees at the end of 2000<sup class="fn"><a href="#src-5">5</a></sup></td></tr></tbody></table>
+<div class="card rv">
+<div class="card-head"><div><h3>Sales and net income, 1995–2014</h3><p>$ billions for sales, $ millions for net income. Hover for the year. The 1995–1998 bars are Tandy Corporation, which still included other chains.</p></div></div>
+<div class="cbox tall"><canvas id="revChart"></canvas></div>
+<div class="src">10-K filings for each year<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-4">4</a></sup><sup class="fn"><a href="#src-9">9</a></sup><sup class="fn"><a href="#src-13">13</a></sup>. 2009–2013 use the figures as restated in the 2013 10-K. 2014 is the first 39 weeks only, from the Q3 10-Q<sup class="fn"><a href="#src-14">14</a></sup>. Earlier years are as first reported.</div>
+</div>
+</div>
+</section>
+
+<section id="story" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">02</span>The story</div><h2 class="rv">Ninety-four years, five chapters</h2><p class="lede rv">The chain survived the end of radio kits, the end of CB radio and the end of its own computer business. It didn’t survive the smartphone and its own lease book.</p></div>
+<div class="story">
+<div class="stage" id="stage">
+<div class="chap-n" id="stN">Chapter 1 of 5</div>
+<div class="big" id="stBig" style="color:#93743a">1921</div>
+<div class="cap" id="stCap">a radio-parts store opens in Boston</div>
+<div class="bar"><span id="stBar" style="width:20%"></span></div>
+</div>
+<div class="chapters">
+<article class="chap" data-n="1" data-big="1921" data-cap="a radio-parts store opens in Boston" data-bar="20" data-color="#93743a">
+<div class="when">1921 – 1963 · Boston</div>
+<h3>Parts for people who built their own radios</h3>
+<p>The company’s later owner dates RadioShack to 1921, when Theodore and Milton Deutschmann opened a store in Boston selling radio equipment.<sup class="fn"><a href="#src-28">28</a></sup> By the early 1960s the Boston chain was in financial trouble.<sup class="fn"><a href="#src-18">18</a></sup></p>
+<p>In 1963 Charles Tandy, whose Fort Worth company sold leather-craft supplies, bought it. The Handbook of Texas says he made it profitable within two years.<sup class="fn"><a href="#src-18">18</a></sup></p>
+</article>
+<article class="chap" data-n="2" data-big="7,000+" data-cap="company stores and dealers by 1988" data-bar="40" data-color="#3d5f86">
+<div class="when">1963 – 1999 · The Tandy years</div>
+<h3>A store in every town</h3>
+<p>Under Tandy the chain spread through company stores and independent dealers in small towns, passing 7,000 locations by 1988.<sup class="fn"><a href="#src-18">18</a></sup> Tandy also sold its own computers through the stores, starting with the TRS-80 in 1977 (date from general knowledge, not our sources).<sup class="fn"><a href="#src-18">18</a></sup></p>
+<p>In the 1990s Tandy tried bigger formats, including Computer City and Incredible Universe, then exited them. By the 1999 10-K it was a single chain, and in 2000 it renamed itself RadioShack Corporation.<sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-4">4</a></sup><sup class="fn"><a href="#src-18">18</a></sup></p>
+</article>
+<article class="chap" data-n="3" data-big="5,289" data-cap="company-operated stores at the end of 2001, the most ever" data-bar="60" data-color="#1d1b18">
+<div class="when">2000 – 2005 · The peak</div>
+<h3>Phones, partners and record profits</h3>
+<p>Net income reached $368.0M in 2000.<sup class="fn"><a href="#src-5">5</a></sup> The website of the time sold “Batteries &amp; Adapters,” “Electronic Components” and “Wire, Cable, Hardware &amp; Tools,” and advertised partners: Microsoft, RCA, Compaq and Sprint.<sup class="fn"><a href="#src-33">33</a></sup> Company stores peaked at 5,289 at the end of 2001.<sup class="fn"><a href="#src-6">6</a></sup></p>
+<p>Wireless grew from 28.7% of sales in 2003 to 34.3% in 2005, when sales reached $5.08B.<sup class="fn"><a href="#src-9">9</a></sup> Profit was already falling: net income was $267.0M in 2005, down from $337.2M.<sup class="fn"><a href="#src-9">9</a></sup></p>
+</article>
+<article class="chap" data-n="4" data-big="−505" data-cap="net change in company stores during 2006, the only large cut before bankruptcy (derived)" data-bar="80" data-color="#a8321f">
+<div class="when">2006 – 2011 · Turnaround attempts</div>
+<h3>A résumé, an email and a nickname</h3>
+<p>CEO David Edmondson resigned in February 2006 after questions about academic degrees he had claimed.<sup class="fn"><a href="#src-17">17</a></sup> Julian Day became CEO in July. Company stores fell from 4,972 to 4,467 that year, and in August about 400 headquarters employees were told by email that their jobs were gone.<sup class="fn"><a href="#src-9">9</a></sup><sup class="fn"><a href="#src-10">10</a></sup><sup class="fn"><a href="#src-22">22</a></sup></p>
+<p>Profits recovered to about $200M a year. In 2009 the company began calling itself “The Shack” in advertising, while the signs stayed the same.<sup class="fn"><a href="#src-11">11</a></sup><sup class="fn"><a href="#src-23">23</a></sup> James Gooch, the former CFO, became CEO in May 2011.<sup class="fn"><a href="#src-19">19</a></sup></p>
+</article>
+<article class="chap" data-n="5" data-big="$43.3M" data-cap="cash on November 1, 2014, down from $908.2M at the end of 2009" data-bar="100" data-color="#a8321f">
+<div class="when">2012 – 2015 · Collapse</div>
+<h3>Losing money on the phones</h3>
+<p>RadioShack lost $139.4M in 2012 and $400.2M in 2013.<sup class="fn"><a href="#src-13">13</a></sup> Joseph Magnacca, from Walgreens, became CEO in February 2013, and the company’s 2014 Super Bowl ad joked that “the ’80s called” and wanted their store back.<sup class="fn"><a href="#src-13">13</a></sup><sup class="fn"><a href="#src-24">24</a></sup></p>
+<p>Sales in the first 39 weeks of 2014 fell to $2.06B from $2.49B.<sup class="fn"><a href="#src-14">14</a></sup> On February 5, 2015 the company filed for Chapter 11 in Delaware, with a plan to sell up to 2,400 stores to an affiliate of the hedge fund Standard General and close most of the rest.<sup class="fn"><a href="#src-15">15</a></sup><sup class="fn"><a href="#src-20">20</a></sup></p>
+</article>
+</div></div></div>
+</section>
+
+<section id="website">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">03</span>The old website</div><h2 class="rv">Thirty years of radioshack.com</h2><p class="lede rv">These are live views of the Internet Archive’s captures of radioshack.com, loaded from the Wayback Machine with scripts disabled. The front page tracks the company’s identity: parts, then partners, then phones, then a liquidation, a crypto token and a web shop.<sup class="fn"><a href="#src-33">33</a></sup></p></div>
+<div class="wb-strip rv" id="wbStrip"><button class="on" data-i="0"><b>Dec 1996</b>The first storefront</button><button class="" data-i="1"><b>Dec 2000</b>Parts, partners and gifts</button><button class="" data-i="2"><b>Mar 2005</b>The phone store</button><button class="" data-i="3"><b>Nov 2014</b>The last redesign</button><button class="" data-i="4"><b>Jul 2017</b>Selling the furniture</button><button class="" data-i="5"><b>Jan 2022</b>A crypto start-up</button><button class="" data-i="6"><b>Apr 2025</b>An online store again</button></div>
+<div id="wbViews"><div class="wb-view" data-i="0">
+<figure class="browser"><div class="chrome"><span class="cd"></span><span class="cd"></span><span class="cd"></span><span class="url">http://www.radioshack.com/</span></div><div class="shot live"><div class="ld">Loading the archived page from the Internet Archive…</div><iframe data-src="https://web.archive.org/web/19961229094151if_/http://www.radioshack.com:80/" title="Archived www.radioshack.com, captured Dec 29, 1996 · 09:41 UTC" sandbox="allow-same-origin" loading="lazy" referrerpolicy="no-referrer"></iframe></div></figure>
+<figcaption class="wb-cap"><div class="d">Captured Dec 29, 1996 · 09:41 UTC</div><h3>The first storefront</h3><p>A corporate brochure more than a shop: a big round logo over a tiled background, buttons for Store Locator, Future Activities, Contacts, Press Releases and History &amp; Info, and links to “Steve’s Workbench,” a hobbyist help page, and the company’s “United Against Crime” program.</p><div class="warn">Note: Images that were never archived appear as empty boxes.</div><div class="ex">“MasterCard Featured Supplier - December 1996.” Links: Store Locator · Future Plans · Contacts · Press Releases · History &amp; Info. “Steve’s Workbench.” “TV/FM Reception.”</div><div class="arch"><a href="https://web.archive.org/web/19961229094151/http://www.radioshack.com:80/" target="_blank" rel="noopener">Open this capture on the Wayback Machine ↗</a></div></figcaption>
+</div><div class="wb-view" data-i="1" hidden>
+<figure class="browser"><div class="chrome"><span class="cd"></span><span class="cd"></span><span class="cd"></span><span class="url">http://radioshack.com/</span></div><div class="shot live"><div class="ld">Loading the archived page from the Internet Archive…</div><iframe data-src="https://web.archive.org/web/20001203142000if_/http://radioshack.com:80/" title="Archived radioshack.com, captured Dec 3, 2000 · 14:20 UTC" sandbox="allow-same-origin" loading="lazy" referrerpolicy="no-referrer"></iframe></div></figure>

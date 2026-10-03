@@ -1,0 +1,12 @@
+const MODES={
+ stores:{t:'Company stores, Dec 31, 2013',values:S13,scale:[10,25,50,100,200,300],colors:['#f8f1ea','#f6e1d6','#f1cbb9','#e9ad95','#de8b70','#c96a50','#a8452f'],labels:['<10','10–24','25–49','50–99','100–199','200–299','300+'],tip:(n,v)=>`<b>${n}</b><br>${v} company stores<br>${D13[n]} dealer outlets`,
+  ann:[['',14,420,['California: 532 company','stores, the most of any state.'],[-119.6,37.3]],['',250,520,['Texas: 356, and','the head office.'],[-99.5,31.6]],['',700,24,['New York: 328.'],[-75.3,43.0]],['',800,470,['Florida: 283.'],[-81.6,28.4]]]},
+ dealers:{t:'Dealer outlets, Dec 31, 2013',values:D13,scale:[5,10,20,30,40],colors:['#f3f4f7','#dde7f2','#c3d7ec','#a2c0e0','#7fa4cf','#5a83b0'],labels:['<5','5–9','10–19','20–29','30–39','40+'],tip:(n,v)=>`<b>${n}</b><br>${v} dealer outlets<br>${S13[n]} company stores`,
+  ann:[['',20,350,['Alaska: no company stores,','20 dealer outlets.'],[-150,63]],['',300,30,['Dealers filled in where company','stores were thin: Montana 23, Iowa 38.'],[-109.6,47]]]},
+ change:{t:'Change in company stores, 2009–2013',values:CH,scale:[-15,-8,-3,0,1],colors:['#c96a50','#e9ad95','#f6e1d6','#efebe4','#e3eedd','#bfe0b5'],labels:['−15 or more','−8 to −14','−3 to −7','−1 to −2','0','+1 or more'],tip:(n,v)=>`<b>${n}</b><br>${v>0?'+':''}${v} company stores, 2009 to 2013<br>${S09[n]} → ${S13[n]}`,
+  ann:[['',14,440,['Arizona, California and Texas','lost 18 stores each, the most.'],[-111.7,34.3]],['',620,520,['179 net closures in four years,','about 4% of the chain.'],null]]}};
+function leg(m){$('#choroLeg').innerHTML=`<span class="t">${m.t}</span>`+m.colors.map((c,i)=>`<span class="k" style="background:${c}"></span><span class="lb">${m.labels[i]}</span>`).join('')}
+function draw(k){const m=MODES[k];leg(m);B.usMap({svg:'mapRS',key:'keyRS',notes:'notesRS',seed:31,pins:PINS,ann:m.ann,choro:{values:m.values,scale:m.scale,colors:m.colors,tip:m.tip}})}
+let started=false;B.once($('#mapRS'),()=>{started=true;const go=()=>draw('stores');(document.fonts&&document.fonts.load?Promise.all([document.fonts.load('600 19px Caveat'),document.fonts.ready]):Promise.resolve()).then(go,go)},.01);
+seg('mapSeg',k=>draw(k));
+})();
