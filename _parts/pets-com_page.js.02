@@ -1,0 +1,27 @@
+function mobileNotes(id,notes){$(id).innerHTML=notes.map(n=>`<div class="hnote">${n[0].length===1&&n[0]!=='s'&&n[0]!=='r'?'<b>'+n[0]+'</b> · ':''}${n[3].join(' ')}</div>`).join('')}
+function buildMaps(){
+ const us=$('#mapOv');us.innerHTML='';defs(us);
+ el('path',{d:MD.rings.union,fill:'none',stroke:'#c4644d','stroke-width':1.3,'stroke-dasharray':'5 5',opacity:.65},us);
+ el('path',{d:MD.rings.greenwood,fill:'none',stroke:'#c4644d','stroke-width':1.3,'stroke-dasharray':'5 5',opacity:.65},us);
+ drawNotes(us,USN,19,11);roughMarks(us);
+ drawPins(us,US,$('#keyUS'),13);
+ const bay=$('#bayOv');bay.innerHTML='';defs(bay);
+ drawNotes(bay,BAYN,22,61);roughMarks(bay);
+ drawPins(bay,BAY,$('#keyBay'),14);
+ mobileNotes('#notesUS',USN);mobileNotes('#notesBay',BAYN);
+}
+(document.fonts&&document.fonts.load?Promise.all([document.fonts.load('600 19px Caveat'),document.fonts.ready]):Promise.resolve()).then(buildMaps,buildMaps);
+
+});
+
+// live wayback frames: load on first view, scale to fit
+(function(){const fit=v=>{const s=v.querySelector('.shot.live');if(!s)return;const f=s.querySelector('iframe');if(!f)return;const k=s.clientWidth/1000;f.style.transform='scale('+k+')';s.style.height=Math.min(560,Math.round(760*k))+'px'};
+ const load=v=>{const f=v.querySelector('iframe[data-src]');if(f&&!f.src){f.src=f.dataset.src;f.onload=()=>{const l=v.querySelector('.ld');l&&l.remove()}}fit(v)};
+ document.querySelectorAll('#wbStrip button').forEach(b=>b.addEventListener('click',()=>document.querySelectorAll('.wb-view').forEach(v=>{if(!v.hidden)load(v)})));
+ const first=document.querySelector('.wb-view:not([hidden])');if(first){const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){load(first);io.disconnect()}},{threshold:.01});io.observe(first)}
+ addEventListener('resize',()=>document.querySelectorAll('.wb-view:not([hidden])').forEach(fit))})();
+// US base map (Census states via us-atlas, same projection as the pins)
+(function(){const svg=document.getElementById('usBase');if(!svg||typeof d3==='undefined'||typeof topojson==='undefined')return;
+ fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(r=>r.json()).then(us=>{const P=d3.geoAlbersUsa().scale(1300).translate([487.5,305]),path=d3.geoPath(P);
+  const g=d3.select(svg);g.append('path').attr('d',path(topojson.feature(us,us.objects.nation))).attr('fill','#ebe4d6').attr('stroke','#fbf8f2').attr('stroke-width',1.3);
+  g.append('path').attr('d',path(topojson.mesh(us,us.objects.states,(a,b)=>a!==b))).attr('fill','none').attr('stroke','#b5a993').attr('stroke-width',.8)})})();
