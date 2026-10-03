@@ -9,7 +9,7 @@ Fully sourced post-mortems of failed companies and brands, published as a small 
 
 ## Structure
 
-Plain static HTML, no build step. Shared styles live in `assets/site.css` and the shared page runtime (story stage, Wayback tabs, chart helpers, d3 maps with rough.js annotations) in `assets/core.js`. Each post-mortem has its own `index.html` and `page.js`.
+Plain static HTML. Shared styles live in `assets/site.css` and the shared page runtime (story stage, Wayback tabs, chart helpers, d3 maps with rough.js annotations) in `assets/core.js`. Each post-mortem has its own `index.html` and `page.js`.
 
 Third-party libraries load from jsDelivr: Chart.js 4.4.1, rough.js 4.6.6, d3 7.9.0, topojson-client 3.1.0 and the us-atlas state boundaries. Fonts: Source Serif 4, Inter and Caveat from Google Fonts.
 
@@ -19,6 +19,10 @@ Archived websites are shown as live, script-disabled views of Internet Archive c
 
 Every figure links to a numbered source on its page. SEC filings are cited by accession number. Derived numbers, estimates and unverified claims are labeled in the text and summarized in each page's data notes. Homage sections are original recreations, not reproductions of logos or trademarks.
 
-## Deploy
+## Build and deploy
 
-Imported into Vercel as a static project. Every push to `main` deploys.
+The larger pages are stored in `_parts/` as line-split chunks, because the repo was populated through an API with a per-request size limit. `build.sh` copies the site into `dist/` and concatenates those chunks back into the full files (`cat _parts/webvan_index.html.* > dist/webvan/index.html`, and so on). If a full file exists at its real path, it is used instead.
+
+Run locally with `sh build.sh && npx serve dist`.
+
+The repo is imported into Vercel (`vercel.json` sets `buildCommand: sh build.sh` and `outputDirectory: dist`). Every push to `main` deploys.

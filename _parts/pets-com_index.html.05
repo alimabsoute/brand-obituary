@@ -1,0 +1,33 @@
+<li id="src-25">Jay R. Ritter — <a href="https://site.warrington.ufl.edu/ritter/files/IPO-Statistics.pdf" target="_blank" rel="noopener">“Initial Public Offerings: Updated Statistics”</a>, University of Florida.</li>
+<li id="src-26">Federal Reserve Bank of St. Louis — <a href="https://fred.stlouisfed.org/series/NASDAQCOM" target="_blank" rel="noopener">NASDAQ Composite Index (NASDAQCOM)</a>, NASDAQ OMX Group via FRED.</li>
+<li id="src-27">SSTI — <a href="https://ssti.org/blog/venture-capital-explodes-1999" target="_blank" rel="noopener">“Venture Capital Explodes in 1999”</a>, Feb 2000, reporting the PricewaterhouseCoopers MoneyTree survey.</li>
+<li id="src-28">MarketWatch — <a href="http://www.marketwatch.com/story/petopiacom-gets-35-million-in-funding" target="_blank" rel="noopener">“Petopia.com gets $35 million in funding”</a>, Dec 1999.</li>
+<li id="src-29">Los Angeles Times — <a href="https://www.latimes.com/archives/la-xpm-2001-feb-03-fi-20590-story.html" target="_blank" rel="noopener">“Petopia.com Cancels IPO”</a>, Feb 3, 2001.</li>
+<li id="src-30">CNET — <a href="https://www.cnet.com/tech/tech-industry/petco-laps-up-the-assets-of-petopia-com/" target="_blank" rel="noopener">“Petco laps up the assets of Petopia.com”</a>, Dec 2000.</li>
+<li id="src-31">Variety — <a href="https://variety.com/1999/digital/news/discovery-s-pet-project-1117757690/" target="_blank" rel="noopener">“Discovery’s Pet project”</a>, Nov 1999.</li>
+<li id="src-32">Los Angeles Times — <a href="https://www.latimes.com/archives/la-xpm-1999-may-14-fi-37059-story.html" target="_blank" rel="noopener">“Petsmart, Idealab Unit in Web Venture”</a>, May 14, 1999.</li>
+<li id="src-33">InternetNews — <a href="https://www.internetnews.com/small-business/petsmart-com-obtains-50-million-in-second-round-financing/" target="_blank" rel="noopener">“PETsMART.com Obtains $50 Million in Second-Round Financing”</a>, Sep 27, 1999.</li>
+<li id="src-34">Los Angeles Times — <a href="https://www.latimes.com/archives/la-xpm-2000-dec-01-fi-59661-story.html" target="_blank" rel="noopener">“Petsmart.com Pulls Initial Offering”</a>, Dec 1, 2000.</li>
+<li id="src-35">Los Angeles Times — <a href="https://www.latimes.com/archives/la-xpm-2000-feb-05-fi-61239-story.html" target="_blank" rel="noopener">“Petsmart.com Plans IPO Worth Up to $115 Million”</a>, Feb 5, 2000.</li>
+<li id="src-36">Internet Archive Wayback Machine — <a href="https://web.archive.org/web/*/pets.com*" target="_blank" rel="noopener">captures of pets.com and www2.pets.com</a>, May 1999 – Feb 2001 (individual capture links in Section 03).</li>
+<li id="src-37">CNBC — <a href="https://www.cnbc.com/2017/07/20/a-60-year-old-entrepreneur-took-her-business-from-zero-to-500-million.html" target="_blank" rel="noopener">“A 60-year-old entrepreneur took her business from zero to $500 million”</a>, Jul 20, 2017.</li>
+<li id="src-38">Wikipedia — <a href="https://en.wikipedia.org/wiki/Super_Bowl_XXXIV" target="_blank" rel="noopener">“Super Bowl XXXIV”</a> (secondary; broadcaster and date) and the Pets.com article for the reported ad cost.</li>
+<li id="src-39">Map data — U.S. Census Bureau cartographic boundary files (counties, 1:500k) and <a href="https://github.com/topojson/us-atlas" target="_blank" rel="noopener">us-atlas</a> (Census-derived TopoJSON). Rendered with d3-geo.</li>
+</ol>
+<div class="flags">
+<div><b>Modeled, not measured:</b> the per-order calculator and the “$100 of sales” bars apply company-wide ratios from the filings to a hypothetical order. We found no order-level or per-bag cost data, and we don’t repeat the widely circulated but unsourced 40-lb-bag anecdotes.</div>
+<div><b>Not shown:</b> a daily IPET price series. The stock chart uses individually documented closes plus the 10-K’s quarterly high/low ranges.</div>
+<div><b>Secondary figure:</b> the ~$1.2M Super Bowl ad cost comes from secondary reporting, not a filing.</div>
+<div><b>Derived values:</b> Q2 ’99 marketing, the Nov 6, 2000 close, gross margins, ratios, runway quarters, marketing per net new customer, cap-table float and “others”, and the 270-day count are our arithmetic on sourced numbers.</div>
+<div><b>Not comparable:</b> rival funding figures mix single rounds and cumulative totals. Petstore.com’s fulfillment model wasn’t found in our sources.</div>
+<div><b>Map:</b> markers are placed at city level (Bay Area sites at street-address level, approximately). The exact address of the 2000 headquarters move isn’t confirmed. Distance rings are illustrative, not shipping zones.</div>
+<div><b>Archive:</b> several Wayback captures are missing images or substitute images from other dates. Captions flag each case.</div>
+<div><b>Reported, not confirmed:</b> PetSmart’s ~$3.35B price for Chewy (Recode/CNBC). Petopia’s ~60% layoff figure is from contemporary press.</div>
+</div>
+</div>
+</section>
+<section id="more"><div class="wrap"><div class="sec-head"><div class="sec-k">More post-mortems</div></div><div class="related"><a href="/webvan/"><span class="no">No. 002 · Dead</span><div><h3>Webvan</h3><p>A billion-dollar warehouse plan for groceries nobody was yet ordering.</p></div><span class="no">Read</span></a><a href="/radioshack/"><span class="no">No. 003 · Ghost</span><div><h3>RadioShack</h3><p>From 7,000 locations to a brand name that changes hands.</p></div><span class="no">Read</span></a></div></div></section>
+<footer><div class="wrap"><div class="brand">Brand Obituary</div><p style="margin-top:8px;max-width:720px">Independent post-mortems of companies and brands, built from SEC filings, contemporary press and archived web pages. Figures link to numbered sources; estimates and unverified claims are labeled. Brand names and trademarks belong to their owners; homage sections are original recreations, not reproductions of logos.</p><p style="margin-top:8px"><a href="/">All post-mortems</a></p></div></footer>
+<script defer src="/pets-com/page.js"></script>
+</body>
+</html>
