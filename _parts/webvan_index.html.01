@@ -1,0 +1,121 @@
+<figcaption class="wb-cap"><div class="d">Captured Nov 9, 2000 · 06:41 UTC</div><h3>Pick your city</h3><p>After the HomeGrocer merger the front door became a market picker: Atlanta, Chicago, Sacramento, San Diego and the Bay Area under one customer-service number, and Los Angeles, Orange County/Inland Empire, Portland and Seattle under another, a sign the two systems hadn’t yet been merged.</p><div class="warn">Note: The same page appears in captures from May 2000 to May 2001. The Wayback Machine may assemble it from the nearest available captures, so treat the market list as accurate for late 2000.</div><div class="ex">“Please select your service area below and start shopping.” Selection: “Groceries, drugstore &amp; pet items, books, CDs &amp; more.” Quality: “Farm-fresh produce. Superb meat &amp; seafood.”</div><div class="arch"><a href="https://web.archive.org/web/20001109064100/http://www.webvan.com:80/" target="_blank" rel="noopener">Open this capture on the Wayback Machine ↗</a></div></figcaption>
+</div><div class="wb-view" data-i="2" hidden>
+<figure class="browser"><div class="chrome"><span class="cd"></span><span class="cd"></span><span class="cd"></span><span class="url">http://www.webvan.com/</span></div><div class="shot live"><div class="ld">Loading the archived page from the Internet Archive…</div><iframe data-src="https://web.archive.org/web/20011009235100if_/http://www.webvan.com:80/" title="Archived http://www.webvan.com/, Captured Oct 9, 2001 · 23:51 UTC" sandbox="allow-same-origin" loading="lazy" referrerpolicy="no-referrer"></iframe></div></figure>
+<figcaption class="wb-cap"><div class="d">Captured Oct 9, 2001 · 23:51 UTC</div><h3>The asset auction</h3><p>Three months after the shutdown, webvan.com announced court approval to auction everything. Great American Group handled ten former facility sites, including Glen Burnie, Maryland, and DoveBid handled the Foster City headquarters and a San Jose co-location site.</p><div class="ex">“Webvan has received court approval to assign all of our assets to auctioneers for sale during the month of October.” Sites: Azusa, Carol Stream, Carson, Fullerton, Glen Burnie, Irvine, Kent, Oakland, Renton, San Diego.</div><div class="arch"><a href="https://web.archive.org/web/20011009235100/http://www.webvan.com:80/" target="_blank" rel="noopener">Open this capture on the Wayback Machine ↗</a></div></figcaption>
+</div><div class="wb-view" data-i="3" hidden>
+<figure class="browser"><div class="chrome"><span class="cd"></span><span class="cd"></span><span class="cd"></span><span class="url">http://www.webvan.com/</span></div><div class="shot live"><div class="ld">Loading the archived page from the Internet Archive…</div><iframe data-src="https://web.archive.org/web/20100205042650if_/http://www.webvan.com:80/" title="Archived http://www.webvan.com/, Captured Feb 5, 2010 · 04:26 UTC" sandbox="allow-same-origin" loading="lazy" referrerpolicy="no-referrer"></iframe></div></figure>
+<figcaption class="wb-cap"><div class="d">Captured Feb 5, 2010 · 04:26 UTC</div><h3>The name, under Amazon</h3><p>Amazon revived the name in 2009 as a shop for non-perishable groceries that checked out with Amazon accounts.</p><div class="ex"> Categories include Baking Supplies, Beverages, Breakfast Foods, Coffee, Tea &amp; Cocoa, Household Supplies, Pet Supplies and Snacks. A 2016 capture of the About page says Webvan “uses the same great Amazon.com technology.”</div><div class="arch"><a href="https://web.archive.org/web/20100205042650/http://www.webvan.com:80/" target="_blank" rel="noopener">Open this capture on the Wayback Machine ↗</a></div></figcaption>
+</div></div>
+<p class="note rv">Some 1999 and 2000 homepage captures only record a redirect, and a June 2001 market page was archived as a 404 error, so they aren’t shown. Customer login pages in the archive are also excluded because their URLs contain usernames.</p>
+</div>
+</section>
+
+<section id="economics" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">04</span>Unit economics</div><h2 class="rv">Profitable groceries, unprofitable warehouses</h2><p class="lede rv">Webvan’s problem was not the price of a box of cereal. Its gross margin was healthy by grocery standards. What it couldn’t cover was the fixed cost of the machine built to deliver that cereal.</p></div>
+<div class="card rv">
+<div class="card-head"><div><h3>Quarterly sales, costs and losses, Q2 1999 – Q1 2001</h3><p>$ millions. Switch to see gross margin against the size of the loss.</p></div>
+<div class="seg" id="plSeg"><button class="on" data-v="abs">Dollars</button><button data-v="pct">Margins</button></div></div>
+<div class="cbox tall"><canvas id="plChart"></canvas></div>
+<div class="src">Quarterly 10-Qs and 10-K405/10-K<sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-4">4</a></sup><sup class="fn"><a href="#src-5">5</a></sup><sup class="fn"><a href="#src-6">6</a></sup><sup class="fn"><a href="#src-7">7</a></sup>. Q4 1999 and Q4 2000 are derived by subtracting nine-month results from full-year totals. Q4 2000 and Q1 2001 include HomeGrocer. Q1 2001’s loss includes a $73.9M restructuring charge.</div>
+</div>
+<div class="g2">
+<div class="card rv">
+<div class="card-head"><div><h3>Where a $104 order went in 2000</h3><p>Full-year 2000 costs divided by an estimated 1.72 million orders. Derived, not reported.</p></div></div>
+<div class="cbox"><canvas id="orderChart"></canvas></div>
+<div class="src">Order count is estimated as 2000 net sales ($178.5M) divided by the reported $104 average order<sup class="fn"><a href="#src-3">3</a></sup>. G&amp;A includes fulfillment, delivery, real estate, technology and customer service. “Non-cash and one-time” is goodwill amortization, deferred stock compensation and restructuring.</div>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>How many orders would have paid for the machine?</h3><p>Move the slider. Illustrative arithmetic, not a company figure.</p></div></div>
+<div class="calc" style="margin-top:6px">
+<div><label style="font-family:var(--sans);font-size:14px">Average order: <b id="calcV">$104</b></label><input type="range" id="calcR" min="60" max="160" value="104" step="1" aria-label="Average order size">
+<div style="margin-top:18px"><div class="out" id="calcOut">0</div><div style="font-family:var(--sans);font-size:13px;color:var(--mute);margin-top:6px" id="calcNote">orders a day needed</div></div></div>
+<div id="calcRows"></div>
+</div>
+<div class="src">Uses 2000’s reported 26.5% gross margin and $292.3M of G&amp;A<sup class="fn"><a href="#src-3">3</a></sup>, and asks how many orders a day it would take for gross profit alone to cover that G&amp;A. Marketing, engineering and non-cash charges are left out, so the real break-even was higher.</div>
+</div>
+</div>
+<table class="kf compact rv" style="margin-top:44px"><caption>Table 3. Scale against design, 2000</caption><tbody><tr><td class="kv">8,000</td><td>orders a day one distribution center was designed for. A HomeGrocer-style CFC was designed for 2,500<sup class="fn"><a href="#src-3">3</a></sup></td></tr><tr><td class="kv">1,200</td><td>orders a day used as an example in the prospectus. At that rate a center running seven days a week would bring in about $35M a year. Oakland was then running five days a week<sup class="fn"><a href="#src-1">1</a></sup></td></tr><tr><td class="kv">~4,700</td><td>orders a day across the whole company in 2000, if the estimated 1.72 million orders were spread evenly over 365 days (derived)<sup class="fn"><a href="#src-3">3</a></sup></td></tr><tr><td class="kv">$177.0M</td><td>of 2000 G&amp;A was distribution-center operating cost: $141.3M for the Bay Area, Atlanta and Chicago and $35.7M for HomeGrocer sites<sup class="fn"><a href="#src-3">3</a></sup></td></tr><tr><td class="kv">$259.8M</td><td>spent on property and equipment in 2000, up from $64.3M in 1999<sup class="fn"><a href="#src-3">3</a></sup></td></tr></tbody></table>
+<p class="note rv">Webvan never disclosed order counts or per-facility volumes. The 10-K says only that average daily volume “in any facility has been significantly below” design capacity and below the level needed to be profitable.<sup class="fn"><a href="#src-3">3</a></sup></p>
+</div>
+</section>
+
+<section id="marketing">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">05</span>The promise</div><h2 class="rv">A service priced like a supermarket and run like FedEx</h2><p class="lede rv">Unlike Pets.com, Webvan didn’t spend its way into fame. Its marketing budget was modest. The expensive part was what it promised every customer for free.</p></div>
+<div class="tbl-scroll rv"><table class="cmp">
+<tr><th>What Webvan promised</th><th>Where it said so</th><th>What it cost to keep</th></tr>
+<tr><td>Delivery inside a 30-minute window you choose, same day</td><td>Prospectus<sup class="fn"><a href="#src-1">1</a></sup>; 1999 homepage<sup class="fn"><a href="#src-28">28</a></sup></td><td>Dense routing, a fleet of vans and salaried couriers. Couriers were Webvan employees who got two weeks of training, including 36 hours in a classroom<sup class="fn"><a href="#src-3">3</a></sup></td></tr>
+<tr><td>Free delivery on orders over $50, and no tipping</td><td>Prospectus<sup class="fn"><a href="#src-1">1</a></sup>; 1999 homepage<sup class="fn"><a href="#src-28">28</a></sup></td><td>Delivery cost sat inside G&amp;A, which was 164% of sales in 2000<sup class="fn"><a href="#src-3">3</a></sup>. In late 1999 the site extended free delivery to all orders through Dec 31<sup class="fn"><a href="#src-28">28</a></sup></td></tr>
+<tr><td>Prices “generally at or below everyday supermarket prices”</td><td>Prospectus<sup class="fn"><a href="#src-1">1</a></sup></td><td>Capped gross margin at grocery levels: 26.5% in 2000<sup class="fn"><a href="#src-3">3</a></sup></td></tr>
+<tr><td>A store designed to carry over 50,000 items, with hand-cut meat and live lobsters</td><td>Prospectus<sup class="fn"><a href="#src-1">1</a></sup></td><td>Large automated centers of 100,000–355,000 sq ft, built before demand<sup class="fn"><a href="#src-3">3</a></sup></td></tr>
+<tr><td>No membership or service fees</td><td>Prospectus<sup class="fn"><a href="#src-1">1</a></sup></td><td>No second revenue line to subsidize delivery</td></tr>
+</table></div>
+<div class="g2">
+<div class="card rv">
+<div class="card-head"><div><h3>Marketing as a share of sales</h3><p>Sales and marketing expense divided by net sales, by year. Pets.com is shown for scale.</p></div></div>
+<div class="cbox"><canvas id="mktChart"></canvas></div>
+<div class="src">Webvan 10-K<sup class="fn"><a href="#src-3">3</a></sup>. Pets.com figure is marketing &amp; sales over net sales for Q2 1999 – Q3 2000 from its filings, as published in our Pets.com post-mortem.</div>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>Customers came back</h3><p>Average order size, as reported.</p></div></div>
+<div class="cbox"><canvas id="aosChart"></canvas></div>
+<div class="src">10-K and 10-Qs<sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-4">4</a></sup><sup class="fn"><a href="#src-5">5</a></sup>. Cumulative averages are from inception to the date shown. The 10-Q for Q2 2000 said more than 75% of orders came from repeat customers<sup class="fn"><a href="#src-5">5</a></sup>.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="money" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">06</span>The money</div><h2 class="rv">$768M in, almost nothing out</h2><p class="lede rv">Webvan raised about $393M privately and $375M at its IPO, then paid for HomeGrocer with more than a billion dollars of its own stock. Shareholders received nothing in the bankruptcy.</p></div>
+<div class="g2">
+<div class="card rv">
+<div class="card-head"><div><h3>Who owned Webvan before the IPO</h3><p>Share of 296.8 million shares outstanding, Oct 20, 1999.</p></div></div>
+<div class="cap-wrap sm"><div class="cbox" style="height:200px"><canvas id="capChart"></canvas></div><div class="cap-list" id="capList"></div></div>
+<div class="src">Prospectus, principal stockholders table<sup class="fn"><a href="#src-1">1</a></sup>. Directors and officers as a group held 60.5%, including the venture funds represented on the board.</div>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>Money raised, by source</h3><p>$ millions. The HomeGrocer stock was not cash.</p></div></div>
+<div class="cbox"><canvas id="raiseChart"></canvas></div>
+<div class="src">Prospectus<sup class="fn"><a href="#src-1">1</a></sup> and 10-K<sup class="fn"><a href="#src-3">3</a></sup>. Private rounds are net of issuance costs; the IPO figure is gross. Reuters later put the total at “more than $800 million in venture capital and IPO proceeds”<sup class="fn"><a href="#src-19">19</a></sup>.</div>
+</div>
+</div>
+<div class="card rv">
+<div class="card-head"><div><h3>WBVN share price, quarterly high and low</h3><p>Nasdaq, $ per share. The 2001 points are single reported prices, not ranges.</p></div></div>
+<div class="cbox"><canvas id="stockChart"></canvas></div>
+<div class="src">Quarterly ranges from the 10-K<sup class="fn"><a href="#src-3">3</a></sup>. Apr 26, 2001 price from CNNfn<sup class="fn"><a href="#src-15">15</a></sup>; Jul 6, 2001 price from the Los Angeles Times<sup class="fn"><a href="#src-13">13</a></sup>. A 1-for-25 reverse split was proposed in April 2001<sup class="fn"><a href="#src-15">15</a></sup>; prices shown are as reported, not adjusted.</div>
+</div>
+<table class="kf compact rv" style="margin-top:44px"><caption>Table 4. The cash runway</caption><tbody><tr><td class="kv">$212M</td><td>cash and investments at Dec 31, 2000, as reported by CNNfn<sup class="fn"><a href="#src-15">15</a></sup></td></tr><tr><td class="kv">$115M</td><td>at Mar 31, 2001, after a quarter with a $217.0M net loss<sup class="fn"><a href="#src-7">7</a></sup><sup class="fn"><a href="#src-15">15</a></sup></td></tr><tr><td class="kv">~$25M</td><td>of new debt or equity under discussion with existing investors in April 2001<sup class="fn"><a href="#src-15">15</a></sup></td></tr><tr><td class="kv">Q1 2002</td><td>how long Webvan said its cash would last, in May 2001. It lasted until July<sup class="fn"><a href="#src-7">7</a></sup><sup class="fn"><a href="#src-10">10</a></sup></td></tr></tbody></table>
+</div>
+</section>
+
+<section id="map">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">07</span>The map</div><h2 class="rv">Ten metro areas in two years</h2><p class="lede rv">Webvan operated in one market for eleven months before opening a second. After the HomeGrocer merger it ran distribution centers in ten metro areas, and closed three of them in the first half of 2001.</p></div>
+<figure class="map-fig rv">
+<div class="card-head"><div><h3 data-n="1">Webvan’s distribution network, 1999–2001</h3><p><b>What this map shows:</b> every market Webvan served, the facility that served it, and when it closed. Numbered pins match the key below, and the handwritten notes explain the order things went wrong.</p></div></div>
+<div class="map-legend"><span><span class="lg-pin" style="background:var(--p-pets)"></span>Operating until July 9, 2001</span><span><span class="lg-pin" style="background:#cdbcea"></span>Closed earlier in 2001</span><span><span class="lg-pin" style="background:#aecdec"></span>Offices and customer service</span><span><span class="lg-pin" style="background:#f7dc9c"></span>Planned or never opened</span></div>
+<div class="mapbox" style="margin-top:12px;aspect-ratio:975/610"><svg class="ov" id="mapWV" viewBox="0 0 975 610" role="img" aria-label="Map of the United States with numbered pins for Webvan facilities"></svg></div>
+<div class="notes-m" id="notesWV"></div>
+<ol class="map-key" id="keyWV"></ol>
+<figcaption>Pins are placed at city level, and some are nudged apart so they don’t overlap; a thin line joins a moved pin to its true location. Facility sizes are from the 2000 10-K<sup class="fn"><a href="#src-3">3</a></sup>. Launch and closing dates are from the 10-K, 10-Q and press<sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-7">7</a></sup><sup class="fn"><a href="#src-15">15</a></sup>. Base map: U.S. Census Bureau via us-atlas<sup class="fn"><a href="#src-29">29</a></sup>.</figcaption>
+</figure>
+<div class="tbl-scroll rv" style="margin-top:40px"><table class="cmp">
+<caption style="caption-side:top;text-align:left;font-family:var(--sans);font-size:13px;font-weight:600;padding-bottom:8px">Table 5. Operating facilities in the 2000 10-K</caption>
+<tr><th>Facility</th><th class="num">Sq ft</th><th>Market</th><th>Opened</th><th>Fate</th></tr>
+<tr><td>Oakland, CA</td><td class="num">340,000</td><td>Bay Area and Sacramento</td><td>Jun 1999</td><td>Sacramento dropped early 2001; Bay Area shut Jul 9, 2001</td></tr>
+<tr><td>Suwanee, GA</td><td class="num">350,000</td><td>Atlanta</td><td>May 2000</td><td>Closed Apr 2001, about 485 jobs</td></tr>
+<tr><td>Carol Stream, IL</td><td class="num">355,000</td><td>Chicago</td><td>Aug 2000</td><td>Shut Jul 9, 2001</td></tr>
+<tr><td>Renton, WA</td><td class="num">110,000</td><td>Seattle and Portland</td><td>HomeGrocer, Jun 1998 (Seattle)</td><td>Shut Jul 9, 2001</td></tr>
+<tr><td>Fullerton, CA</td><td class="num">100,000</td><td>Orange County</td><td>HomeGrocer, Sep 1999</td><td>Shut Jul 9, 2001</td></tr>
+<tr><td>Carson, CA</td><td class="num">100,000</td><td>Los Angeles</td><td>HomeGrocer, Sep 1999</td><td>Shut Jul 9, 2001</td></tr>
+<tr><td>San Diego, CA</td><td class="num">102,000</td><td>San Diego</td><td>HomeGrocer, May 2000</td><td>Shut Jul 9, 2001</td></tr>
+<tr><td>Carrollton, TX</td><td class="num">n/a</td><td>Dallas</td><td>HomeGrocer, May 2000</td><td>Closed Feb 2001; restructuring charge up to $60.0M</td></tr>
+</table></div>
+<p class="note rv">Smaller “station” sites fed the large centers, and the 10-K doesn’t list them. The October 2001 auction list adds Azusa, Irvine and Kent, plus Glen Burnie, Maryland, which fits the planned Washington, D.C. market.<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-28">28</a></sup> We found no evidence that Glen Burnie ever served customers.</p>
+</div>
+</section>
+
+<section id="rivals" class="alt">
+<div class="wrap">
