@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Webvan (1996–2001): A Post-Mortem · Brand Obituary</title>
+<meta name="description" content="A fully sourced post-mortem of Webvan: the warehouses, the unit economics, the HomeGrocer merger, the archived website and the July 2001 shutdown.">
+<meta property="og:title" content="Webvan (1996–2001): A Post-Mortem · Brand Obituary">
+<meta property="og:description" content="A fully sourced post-mortem of Webvan: the warehouses, the unit economics, the HomeGrocer merger, the archived website and the July 2001 shutdown.">
+<meta name="theme-color" content="#fcfbf7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 fill=%22%23121212%22/%3E%3Crect x=%229%22 y=%2214%22 width=%2214%22 height=%222%22 fill=%22%23fcfbf7%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/roughjs@4.6.6/bundled/rough.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+<header class="mast"><div class="wrap">
+<a class="brand" href="/">Brand Obituary</a>
+<nav class="site" aria-label="Site"><a href="/">Index</a><a href="/pets-com/">Pets.com</a><a href="/webvan/" class=on>Webvan</a><a href="/radioshack/">RadioShack</a></nav>
+</div></header>
+<nav class="top" id="topnav"><div class="wrap">
+<a href="#bubble">The bubble</a><a href="#story">Story</a><a href="#website">The website</a><a href="#economics">Unit economics</a><a href="#marketing">The promise</a><a href="#money">The money</a><a href="#map">Map</a><a href="#rivals">Rivals</a><a href="#timeline">Timeline</a><a href="#people">People</a><a href="#press">Press</a><a href="#cause">Cause of death</a><a href="#fork">What if</a><a href="#homage">Homage</a><a href="#now">Afterlife</a><a href="#sources">Sources</a>
+</div></nav>
+<header class="hero"><div class="wrap">
+<div class="hero-grid">
+<div class="hero-text">
+<p class="kicker rv"><span class="tag">Dead</span>Online grocery delivery · Foster City, California</p>
+<h1 class="name rv">Webvan</h1>
+<p class="dates rv">Founded December 1996. Stopped delivering July 9, 2001.</p>
+<p class="standfirst rv">Webvan promised groceries at your door inside a 30-minute window you chose. It built the warehouses first and waited for the customers.</p>
+<p class="deck rv">It raised about $393M privately and $375M in one of the largest IPOs of 1999, signed a deal with Bechtel to build up to 26 more distribution centers, and merged with its closest rival. Its gross margins were positive from late 1999. Its warehouses never ran anywhere near full. This post-mortem is built from Webvan’s prospectus, 10-Ks, 10-Qs and bankruptcy filing, contemporary press and the archived website.</p>
+<p class="byline rv">Brand Obituary desk · Every figure links to a numbered source · Derived figures and estimates are labeled</p>
+</div>
+<figure class="hero-art rv"><svg viewBox="0 0 300 220" role="img" aria-label="Line drawing of a delivery van"><g fill="none" stroke="#1d1b18" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M22 150 V78 Q22 66 34 66 H176 V150"/><path d="M176 92 H222 Q234 92 242 104 L268 132 Q274 138 274 146 V150 H176"/><path d="M196 100 H226 L246 128 H196 Z"/><path d="M14 150 H284"/><circle cx="72" cy="158" r="17"/><circle cx="72" cy="158" r="6"/><circle cx="226" cy="158" r="17"/><circle cx="226" cy="158" r="6"/><path d="M40 84 H160" stroke-dasharray="2 6"/><path d="M262 140 h8"/></g><g fill="none" stroke="#9e2a2b" stroke-width="2"><path d="M60 104 h28 l6 30 h-40 z"/><path d="M66 104 q8 -14 16 0"/><path d="M104 110 h40 v24 h-40 z"/></g><text x="150" y="204" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#5c5c5c">7:00–7:30 pm</text></svg><figcaption>Original illustration. Not the Webvan logo or livery.</figcaption></figure>
+</div>
+<div class="hero-tables">
+<table class="kf rv"><caption>Table 1. The company in four numbers</caption><tbody><tr><td class="kv">$375M</td><td>raised in the November 1999 IPO: 25 million shares at $15<sup class="fn"><a href="#src-1">1</a></sup></td></tr><tr><td class="kv">8,000</td><td>orders a day each distribution center was designed to handle. Actual volumes were “significantly below”<sup class="fn"><a href="#src-3">3</a></sup></td></tr><tr><td class="kv">$827M</td><td>cumulative net loss from 1998 through March 2001<sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-7">7</a></sup></td></tr><tr><td class="kv">~2,000</td><td>employees let go on July 9, 2001, when it stopped all deliveries<sup class="fn"><a href="#src-10">10</a></sup><sup class="fn"><a href="#src-11">11</a></sup></td></tr></tbody></table>
+<div class="findings rv"><h2 class="h-small">Key findings</h2><ol><li><b>It made money on the groceries.</b> Gross margin was 25–28% in every quarter from Q1 2000. The losses came from fulfillment, delivery, real estate and technology, booked as general and administrative costs.<sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-6">6</a></sup></li><li><b>It built for demand that never arrived.</b> In 2000 G&amp;A was $292.3M, 1.6 times sales. Distribution centers designed for 8,000 orders a day never came close.<sup class="fn"><a href="#src-3">3</a></sup></li><li><b>It expanded before it worked.</b> Atlanta opened in May 2000 and Chicago in August, and the Bechtel contract covered up to 26 more centers, while the Bay Area still lost money.<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-3">3</a></sup></li><li><b>The merger doubled the problem.</b> The all-stock HomeGrocer deal cost about $1.04B, $901.6M of it goodwill, and added more cities to fix.<sup class="fn"><a href="#src-3">3</a></sup></li><li><b>The idea survived.</b> Four former Webvan executives later helped build Amazon’s grocery business, and Amazon bought the webvan.com name.<sup class="fn"><a href="#src-19">19</a></sup><sup class="fn"><a href="#src-20">20</a></sup></li></ol></div>
+</div>
+</div></header>
+
+<section id="bubble">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">01</span>The bubble it was born into</div><h2 class="rv">Public at the peak, priced like a platform</h2><p class="lede rv">Webvan went public in November 1999, four months before the Nasdaq’s all-time bubble high, as a company with $13.3M in annual sales.</p></div>
+<table class="kf compact rv"><caption>Table 2. The market Webvan was born into</caption><tbody><tr><td class="kv">476</td><td>U.S. IPOs in 1999, with an average first-day gain of 71.2%<sup class="fn"><a href="#src-31">31</a></sup></td></tr><tr><td class="kv">$34</td><td>Webvan’s high in its first quarter of trading, against a $15 IPO price<sup class="fn"><a href="#src-2">2</a></sup></td></tr><tr><td class="kv">&gt;$10B</td><td>the market value that $34 a share implied, as reported by the Los Angeles Times<sup class="fn"><a href="#src-13">13</a></sup></td></tr><tr><td class="kv">$13.3M</td><td>Webvan’s net sales for all of 1999<sup class="fn"><a href="#src-3">3</a></sup></td></tr></tbody></table>
+<div class="card rv">
+<div class="card-head"><div><h3>The Nasdaq Composite, with Webvan’s life marked</h3><p>Weekly averages of daily closes. Hover over a marker for the event.</p></div></div>
+<div class="cbox"><canvas id="nasdaqChart"></canvas></div>
+<div class="src">Index data: NASDAQ OMX Group via FRED, series NASDAQCOM, weekly average<sup class="fn"><a href="#src-27">27</a></sup>. Events: SEC filings and press<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-3">3</a></sup><sup class="fn"><a href="#src-10">10</a></sup>.</div>
+</div>
+</div>
+</section>
+
+<section id="story" class="alt">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">02</span>The story</div><h2 class="rv">A warehouse company that sold groceries</h2><p class="lede rv">Webvan’s founder built bookstores. His bet was that automation could make home delivery cheaper than the supermarket. The bet needed scale, and scale needed time the market didn’t give it.</p></div>
+<div class="story">
+<div class="stage" id="stage">
+<div class="chap-n" id="stN">Chapter 1 of 5</div>
+<div class="big" id="stBig" style="color:#4f7a4a">$118.3M</div>
+<div class="cap" id="stCap">raised in private preferred stock before June 30, 1999</div>
+<div class="bar"><span id="stBar" style="width:20%"></span></div>
+</div>
+<div class="chapters">
+<article class="chap" data-n="1" data-big="$118.3M" data-cap="raised in private preferred stock before June 30, 1999" data-bar="20" data-color="#4f7a4a">
+<div class="when">1996 – mid 1999 · Birth</div>
+<h3>A bookseller’s logistics machine</h3>
+<p>Louis Borders, who founded Borders Books in 1971, founded Webvan in December 1996.<sup class="fn"><a href="#src-1">1</a></sup> The plan was a network of highly automated distribution centers, each designed to fill 8,000 orders a day, feeding vans that delivered inside a customer-chosen 30-minute window.<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-3">3</a></sup></p>
+<p>By June 30, 1999 it had raised $118.3M in private preferred stock, net of costs.<sup class="fn"><a href="#src-1">1</a></sup> Benchmark, Sequoia and SOFTBANK were among the largest holders.<sup class="fn"><a href="#src-1">1</a></sup> The Webstore launched in the San Francisco Bay Area in June 1999, served from a 340,000 sq ft center in Oakland.<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-3">3</a></sup></p>
+</article>
+<article class="chap" data-n="2" data-big="26" data-cap="more distribution centers Bechtel agreed to build over three years, July 1999" data-bar="40" data-color="#93743a">
+<div class="when">Jul – Sep 1999 · The build-out</div>
+<h3>Ordering warehouses in bulk</h3>
+<p>In July 1999 Webvan signed an agreement with Bechtel for the construction of up to 26 additional distribution centers over three years.<sup class="fn"><a href="#src-1">1</a></sup> The prospectus named Atlanta for 2000, then Chicago and Seattle, then Dallas, Washington, D.C. and five other markets in 2001.<sup class="fn"><a href="#src-1">1</a></sup></p>
+<p>That summer it sold $275.0M of Series D preferred stock.<sup class="fn"><a href="#src-1">1</a></sup> In September George Shaheen left the top job at Andersen Consulting, reported as a $4M-a-year post, to become CEO.<sup class="fn"><a href="#src-1">1</a></sup><sup class="fn"><a href="#src-17">17</a></sup></p>
+</article>
+<article class="chap" data-n="3" data-big="$34.00" data-cap="high in the first quarter of trading, after a $15 IPO in November 1999" data-bar="60" data-color="#1d1b18">
+<div class="when">Nov 1999 · The IPO</div>
+<h3>Worth more than the grocers it meant to replace</h3>
+<p>Goldman Sachs led the sale of 25 million shares at $15, raising $375M gross.<sup class="fn"><a href="#src-1">1</a></sup> The stock traded as high as $34 that quarter, which the Los Angeles Times later said gave the company “a value of more than $10 billion.”<sup class="fn"><a href="#src-2">2</a></sup><sup class="fn"><a href="#src-13">13</a></sup></p>
+<p>Webvan had $13.3M in sales that year and a net loss of $144.6M.<sup class="fn"><a href="#src-3">3</a></sup> Its average order was $78.<sup class="fn"><a href="#src-3">3</a></sup></p>
+<div class="pull">“Same-day home delivery within a customer-selected 30-minute window.”<small>The promise, as written in the prospectus, Nov 1999<sup class="fn"><a href="#src-1">1</a></sup></small></div>
+</article>
+<article class="chap" data-n="4" data-big="$1.04B" data-cap="paid in Webvan stock for rival HomeGrocer, September 2000. $901.6M of it was goodwill" data-bar="80" data-color="#a8321f">
+<div class="when">2000 · Expansion and merger</div>
+<h3>More cities, before the first one worked</h3>
+<p>Atlanta opened in May 2000 and Chicago in August.<sup class="fn"><a href="#src-3">3</a></sup> On September 5, 2000 Webvan completed its merger with Kirkland, Washington-based HomeGrocer, issuing 138.3 million shares at 1.07605 per HomeGrocer share. The total purchase price was about $1,044.0M, of which $901.6M was recorded as goodwill.<sup class="fn"><a href="#src-3">3</a></sup></p>
+<p>Sales rose to $178.5M for the year, but the net loss rose to $453.3M.<sup class="fn"><a href="#src-3">3</a></sup> By the fourth quarter the stock traded as low as $0.28.<sup class="fn"><a href="#src-3">3</a></sup></p>
+</article>
+<article class="chap" data-n="5" data-big="~2,000" data-cap="workers let go on July 9, 2001. Chapter 11 followed on July 13" data-bar="100" data-color="#a8321f">
+<div class="when">2001 · Collapse</div>
+<h3>Closing cities, then everything</h3>
+<p>The 2000 annual report carried a going-concern warning.<sup class="fn"><a href="#src-7">7</a></sup> Webvan closed Dallas in February 2001 and Sacramento soon after, then Atlanta in April, cutting about 485 jobs there and about 400 at headquarters. Cash fell from $212M at the end of 2000 to $115M by March 31.<sup class="fn"><a href="#src-7">7</a></sup><sup class="fn"><a href="#src-15">15</a></sup> Shaheen resigned on April 13 and COO Robert Swan became CEO.<sup class="fn"><a href="#src-14">14</a></sup><sup class="fn"><a href="#src-15">15</a></sup></p>
+<p>On July 9, 2001 Webvan stopped taking and delivering orders in all seven remaining markets and let about 2,000 workers go.<sup class="fn"><a href="#src-10">10</a></sup><sup class="fn"><a href="#src-11">11</a></sup> It filed for Chapter 11 in Delaware on July 13 and pursued a sale of its assets.<sup class="fn"><a href="#src-8">8</a></sup></p>
+</article>
+</div></div></div>
+</section>
+
+<section id="website">
+<div class="wrap">
+<div class="sec-head"><div class="sec-k"><span class="sn">03</span>The old website</div><h2 class="rv">What customers actually saw</h2><p class="lede rv">These are live views of the Internet Archive’s captures of webvan.com, loaded from the Wayback Machine with scripts disabled. Captures were found with the CDX API in October 2026. Pages from 1999–2001 are often incomplete, and we note where a render is broken.<sup class="fn"><a href="#src-28">28</a></sup></p></div>
+<div class="wb-strip rv" id="wbStrip"><button class="on" data-i="0"><b>Nov 1999</b>Thanksgiving storefront</button><button class="" data-i="1"><b>Nov 2000</b>Pick your city</button><button class="" data-i="2"><b>Oct 2001</b>The asset auction</button><button class="" data-i="3"><b>Feb 2010</b>The name, under Amazon</button></div>
+<div id="wbViews"><div class="wb-view" data-i="0">
+<figure class="browser"><div class="chrome"><span class="cd"></span><span class="cd"></span><span class="cd"></span><span class="url">http://www03.webvan.com/default.asp</span></div><div class="shot live"><div class="ld">Loading the archived page from the Internet Archive…</div><iframe data-src="https://web.archive.org/web/19991127213601if_/http://www03.webvan.com:80/default.asp" title="Archived http://www03.webvan.com/default.asp, Captured Nov 27, 1999 · 21:36 UTC" sandbox="allow-same-origin" loading="lazy" referrerpolicy="no-referrer"></iframe></div></figure>
+<figcaption class="wb-cap"><div class="d">Captured Nov 27, 1999 · 21:36 UTC</div><h3>Thanksgiving storefront</h3><p>The Bay Area store five months after launch: a frameset with the cart on the left and a weekly specials column. It promised “Delivery in our vans within the 30-minute window you choose” and “Free delivery and no tipping,” and a banner extended free delivery on all orders through December 31, 1999.</p><div class="warn">Note: Most product images were never archived, so the page renders as layout with empty boxes. Frames are stitched from captures taken on different dates.</div><div class="ex">Peet’s Whole Bean House Blend, 1 lb: $8.97. Land O’ Lakes Butter, 1 lb: $2.47. Lagunitas India Pale Ale, 6-pack: $4.97. Granny Smith apples, large: $0.99 each. “Extended! Free Delivery for All Orders Placed by December 31, 1999.”</div><div class="arch"><a href="https://web.archive.org/web/19991127213601/http://www03.webvan.com:80/default.asp" target="_blank" rel="noopener">Open this capture on the Wayback Machine ↗</a></div></figcaption>
+</div><div class="wb-view" data-i="1" hidden>
+<figure class="browser"><div class="chrome"><span class="cd"></span><span class="cd"></span><span class="cd"></span><span class="url">http://www.webvan.com/</span></div><div class="shot live"><div class="ld">Loading the archived page from the Internet Archive…</div><iframe data-src="https://web.archive.org/web/20001109064100if_/http://www.webvan.com:80/" title="Archived http://www.webvan.com/, Captured Nov 9, 2000 · 06:41 UTC" sandbox="allow-same-origin" loading="lazy" referrerpolicy="no-referrer"></iframe></div></figure>
