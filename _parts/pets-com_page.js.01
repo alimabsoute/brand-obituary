@@ -1,0 +1,105 @@
+function drawMix(){mk('mixChart',{type:'doughnut',data:{labels:['Advertising','Other M&S (derived)'],datasets:[{data:[26.934,15.557],backgroundColor:[RED,'#c9b48a'],borderColor:'#fcfbf7',borderWidth:3}]},options:{cutout:'62%',plugins:{legend:{position:'bottom'},tooltip:{...tip,callbacks:{label:c=>` $${c.raw.toFixed(1)}M (${(c.raw/42.491*100).toFixed(0)}%)`}}}}})}
+// cap table
+const CAP=[['Amazon.com',30.4,'#1d1b18','40.7% before the IPO. Director Mark Britto was Amazon’s VP of strategic alliances.'],['Hummer Winblad',15.8,'#3d5f86','21.2% before the IPO. Partner John Hummer sat on the board.'],['Greg McLemore',5.1,'#93743a','Founder of the original WebMagic site.'],['Bowman Capital',4.7,'#6f8f6a','Institutional investor.'],['Catalyst (Disney)',3.7,'#8a5a9a','Disney affiliate, Burbank. Stock issued partly for ABC airtime.'],['Julie Wainwright',3.1,'#a8321f','CEO. Includes options.'],['Chris Deyo',1.8,'#c9553f','President. Includes options.'],['IPO public float',25.4,'#c9b48a','7.5M shares sold at $11 (derived %).'],['All other holders',10.0,'#ddd3c2','Other investors, employees, options (derived remainder).']];
+function drawCapT(){const cl=$('#capList');cl.innerHTML=CAP.map((c,i)=>`<div data-i="${i}" title="${c[3]}"><span class="sw-c" style="background:${c[2]}"></span><span>${c[0]}<br><small style="color:var(--mute);font-size:12px">${c[3]}</small></span><b>${c[1].toFixed(1)}%</b></div>`).join('');
+ mk('capChart',{type:'doughnut',data:{labels:CAP.map(c=>c[0]),datasets:[{data:CAP.map(c=>c[1]),backgroundColor:CAP.map(c=>c[2]),borderColor:'#fcfbf7',borderWidth:2,hoverOffset:14}]},options:{cutout:'58%',layout:{padding:12},plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>` ${c.label}: ${c.raw}%`}}},
+ onHover:(e,a)=>{$$('#capList div').forEach((d,i)=>d.classList.toggle('hl',a.length&&a[0].index===i))}}});
+ $$('#capList div').forEach(d=>{const h=()=>{const ch=charts.capChart,i=+d.dataset.i;ch.setActiveElements([{datasetIndex:0,index:i}]);ch.tooltip.setActiveElements([{datasetIndex:0,index:i}],{x:0,y:0});ch.update();$$('#capList div').forEach(x=>x.classList.toggle('hl',x===d))};d.onmouseenter=h;d.onclick=h})}
+// stock vs nasdaq
+const D0=Date.UTC(2000,1,11),day=s=>Math.round((Date.parse(s)-D0)/864e5);
+const IP=[['2000-02-11',11,'IPO price'],['2000-11-06',0.66,'Prior close (derived)'],['2000-11-07',0.22,'Wind-down announced'],['2000-12-29',0.09375,'Last trading day of 2000'],['2001-01-18',0.125,'Dissolution; delisted']];
+const QR=[['2000-02-11','2000-03-31',3.88,14],['2000-04-01','2000-06-30',1.88,4.63],['2000-07-01','2000-09-30',0.59,2.44],['2000-10-01','2000-12-31',0.06,0.81]];
+function drawStk(m='lin'){const lg=m==='log';const nq=NQ.filter(p=>p[0]>='2000-02-11'&&p[0]<='2001-01-26').map(p=>({x:day(p[0]),y:+(p[1]/4395.45*100).toFixed(1)}));nq.unshift({x:0,y:100});
+ const ranges=QR.map((q,i)=>({label:i?'':'IPET quarterly high–low',data:[{x:(day(q[0])+day(q[1]))/2,y:q[2]/11*100},{x:(day(q[0])+day(q[1]))/2,y:q[3]/11*100}],borderColor:'rgba(168,50,31,.2)',borderWidth:mob()?12:20,pointRadius:0,borderCapStyle:'butt',showLine:true}));
+ const mon=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+ mk('stkChart',{type:'line',data:{datasets:[{label:'Nasdaq (indexed)',data:nq,borderColor:INK,borderWidth:1.8,pointRadius:0,tension:.15},
+ {label:'IPET documented closes (indexed)',data:IP.map(p=>({x:day(p[0]),y:p[1]/11*100})),borderColor:RED,backgroundColor:'#fcfbf7',pointBorderColor:RED,pointBorderWidth:2.5,pointRadius:6,borderWidth:2,borderDash:[4,4]},...ranges]},
+ options:{interaction:{mode:'nearest',intersect:true},plugins:{legend:{position:'bottom',labels:{filter:l=>l.datasetIndex<2}},tooltip:{...tip,callbacks:{title:c=>{const d=new Date(D0+c[0].raw.x*864e5);return d.toISOString().slice(0,10)},label:c=>{if(c.datasetIndex===1){const p=IP[c.dataIndex];return ` IPET $${p[1]} → ${c.raw.y.toFixed(1)} · ${p[2]}`}if(c.datasetIndex===0)return ` Nasdaq index: ${c.raw.y}`;const q=QR[c.datasetIndex-2];return ` IPET range $${q[2]}–$${q[3]}`}}}},
+ scales:{y:{type:lg?'logarithmic':'linear',min:lg?0.5:0,max:lg?200:140,grid:{color:GRID},ticks:{callback:v=>lg&&![0.5,1,2,5,10,20,50,100,200].includes(+v)?'':v}},x:{type:'linear',min:-5,max:350,grid:{display:false},afterBuildTicks:a=>{a.ticks=[];for(let m=1;m<=12;m+=mob()?3:2){a.ticks.push({value:Math.round((Date.UTC(2000,m,1)-D0)/864e5)})}},ticks:{callback:v=>{const d=new Date(D0+v*864e5+864e5);return mon[d.getUTCMonth()]+" '"+String(d.getUTCFullYear()).slice(2)}}}}}})}
+seg('stkSeg',drawStk);
+function drawHC(){mk('hcChart',{type:'bar',data:{labels:['Mar 31, ’99','Sep 30, ’99','Dec 31, ’99','Nov 7, ’00','Dec 31, ’00','Jan 16, ’01'],datasets:[{label:'Employees',data:[4,123,270,320,26,0],backgroundColor:['#c9b48a','#c9b48a','#c9b48a',INK,RED,RED],borderRadius:2}]},
+ options:{plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>' '+c.raw+' employees',footer:c=>['','','','~255 laid off that day','After layoffs','All remaining staff resigned'][c[0].dataIndex]}}},scales:{y:{grid:{color:GRID}},x:{grid:{display:false},ticks:{font:{size:mob()?9:11},maxRotation:0,autoSkip:false}}}}})}
+function drawCL(){mk('capLossChart',{type:'bar',data:{labels:['Cash raised','Net losses'],datasets:[{label:'Private preferred (1999)',data:[109.2,0],backgroundColor:GREEN,stack:'a'},{label:'IPO net proceeds',data:[75.3,0],backgroundColor:'#9db894',stack:'a'},{label:'Petstore.com cash',data:[3,0],backgroundColor:'#c9d8c3',stack:'a'},{label:'Cumulative net loss to Sep 30, 2000',data:[0,146.6],backgroundColor:RED,stack:'a'}]},
+ options:{indexAxis:'y',plugins:{legend:{position:'bottom',labels:{font:{size:11}}},tooltip:{...tip,filter:c=>c.raw>0,callbacks:{label:c=>' '+c.dataset.label+': $'+c.raw+'M'}}},scales:{x:{stacked:true,grid:{color:GRID},ticks:{callback:v=>'$'+v+'M'}},y:{stacked:true,grid:{display:false}}}}})}
+function drawRival(){mk('rivalChart',{type:'bar',data:{labels:['Pets.com','Petopia','Petstore.com','PetSmart.com'],datasets:[
+ {label:'Private rounds',data:[109.2,null,97,50],backgroundColor:[RED,PLUM,PLUM,PLUM],stack:'a'},{label:'Petopia: Jul ’99 round',data:[null,66,null,null],backgroundColor:'#b796c2',stack:'a'},{label:'Petopia: Dec ’99 round',data:[null,35,null,null],backgroundColor:PLUM,stack:'a'},
+ {label:'Parent cash contributions',data:[null,null,null,20],backgroundColor:'#b796c2',stack:'a'},{label:'IPO gross proceeds',data:[82.5,null,null,null],backgroundColor:'#d98d7c',stack:'a'}]},
+ options:{indexAxis:'y',plugins:{legend:{position:'bottom',labels:{font:{size:11}}},tooltip:{...tip,filter:c=>c.raw!=null,callbacks:{label:c=>` ${c.dataset.label}: $${c.raw}M`}}},scales:{x:{stacked:true,grid:{color:GRID},ticks:{callback:v=>'$'+v+'M'}},y:{stacked:true,grid:{display:false}}}}})}
+function drawVS(){mk('vsChart',{type:'bar',data:{labels:[['Pets.com','lifetime'],['Chewy','2012'],['Chewy','2016'],['Chewy','FY2024']],datasets:[{label:'Revenue',data:[31.555e6,26e6,0.9e9,11.861e9],backgroundColor:[RED,GREEN,GREEN,GREEN],borderRadius:2,barPercentage:.6}]},
+ options:{plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>{const v=c.raw;return ' '+(v>=1e9?'$'+(v/1e9).toFixed(2)+'B':'$'+(v/1e6).toFixed(1)+'M')}}}},scales:{y:{type:'logarithmic',min:1e7,max:2e10,grid:{color:GRID},ticks:{callback:v=>({1e7:'$10M',1e8:'$100M',1e9:'$1B',1e10:'$10B'})[v]||''}},x:{grid:{display:false}}}}})}
+const LAZY={ipoChart:()=>drawIPO(),nasdaqChart:drawNQ,econChart:()=>drawEcon(),custChart:drawCust,plChart:()=>drawPL(),mixChart:drawMix,capChart:drawCapT,stkChart:()=>drawStk(),hcChart:drawHC,capLossChart:drawCL,rivalChart:drawRival,vsChart:drawVS};
+if(hasChart){const cIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){LAZY[e.target.id]();cIO.unobserve(e.target)}}),{rootMargin:'200px 0px'});Object.keys(LAZY).forEach(id=>$('#'+id)&&cIO.observe($('#'+id)))}
+// ---------- maps ----------
+const MD={"pts":{"sf":[34.8,261.4],"union":[40.1,267.3],"greenwood":[669,275.2],"emery":[37.5,260.8],"pasadena":[89.1,361.4],"seattle":[97.6,46.3],"phoenix":[197.2,399.8],"sandiego":[99.7,397.5],"burbank":[86.3,360],"nyc":[869.7,215.7],"miami":[822.7,572.5]},"rings":{"union":"M224.9,-4.4L231,-0.3L240.3,6.5L249.3,13.5L258.1,20.9L266.5,28.6L274.7,36.6L282.5,44.8L290.1,53.3L297.3,62.1L304.2,71.1L310.7,80.4L316.9,89.9L322.7,99.6L328.2,109.5L333.3,119.6L338.1,129.9L342.5,140.4L346.5,151L350.1,161.8L353.4,172.7L356.3,183.7L358.8,194.8L360.9,206L362.7,217.3L364,228.6L365,240L365.6,251.4L365.9,262.8L365.7,274.3L365.2,285.7L364.2,297.2L362.9,308.5L361.3,319.9L359.2,331.2L356.8,342.3L354,353.5L350.9,364.5L347.3,375.3L343.4,386.1L339.2,396.7L334.6,407.2L329.7,417.4L324.4,427.5L318.8,437.5L312.8,447.2L306.5,456.6L299.9,465.9L293,474.9L285.8,483.7L278.3,492.2L270.4,500.4L262.3,508.4L254,516L245.3,523.4L236.4,530.4L227.3,537.1L217.9,543.5L208.3,549.6L198.5,555.3L188.4,560.6L178.2,565.6L167.8,570.3L157.3,574.5L146.5,578.4L135.7,581.9L124.7,585.1L113.6,587.8L102.3,590.1L91,592.1L79.7,593.6L68.2,594.8L56.8,595.6L45.3,595.9L33.7,595.8L22.2,595.4L10.7,594.5L-0.8,593.3L-12.2,591.6L-23.6,589.6L-34.9,587.1L-46.1,584.3L-57.2,581L-68.2,577.4L-79,573.4L-89.7,569.1L-100.2,564.3L-104,562.5L-104,-4.4Z","greenwood":"M842,-4.4L844.1,-3.1L853.6,3.1L862.9,9.6L871.8,16.4L880.6,23.6L889,31.1L897.2,38.9L905.1,47L912.7,55.4L920,64L927,72.9L933.6,82.1L940,91.5L946,101.1L951.7,111L957.1,121L962.1,131.3L966.8,141.7L971.1,152.2L975.1,162.9L978.7,173.8L982,184.8L984.9,195.8L987.4,207L989.6,218.2L991.4,229.6L992.8,240.9L993.8,252.3L994.5,263.7L994.7,275.2L994.6,286.6L994.1,298L993.3,309.4L992,320.8L990.4,332.1L988.3,343.3L985.9,354.4L983.1,365.5L980,376.4L976.5,387.2L972.6,397.9L968.3,408.4L963.7,418.8L958.7,429L953.3,439L947.6,448.8L941.6,458.4L935.2,467.8L928.5,477L921.5,485.9L914.2,494.6L906.5,503L898.6,511.1L890.4,518.9L881.9,526.5L873.1,533.8L864.1,540.7L854.8,547.3L845.3,553.6L835.5,559.6L825.6,565.2L815.5,570.5L805.1,575.4L794.6,580L784,584.2L773.2,588L762.2,591.4L751.2,594.5L740,597.1L728.7,599.4L717.4,601.3L706,602.8L694.6,603.9L683.1,604.5L671.7,604.8L660.2,604.7L648.7,604.2L637.3,603.3L625.9,602L614.6,600.3L603.3,598.2L592.2,595.7L581.1,592.8L570.1,589.6L559.3,585.9L548.6,581.9L538.1,577.5L527.7,572.8L517.6,567.7L507.6,562.2L497.8,556.4L488.3,550.2L478.9,543.7L469.9,536.9L461,529.8L452.4,522.4L444.1,514.6L436.1,506.6L428.4,498.3L420.9,489.7L413.8,480.9L406.9,471.8L400.4,462.5L394.3,453L388.4,443.3L382.9,433.3L377.7,423.2L372.9,412.8L368.4,402.4L364.3,391.7L364.3,391.7L360.6,380.9L357.2,370L354.2,359L351.5,347.9L349.2,336.7L347.3,325.4L345.8,314.1L344.6,302.7L343.9,291.2L343.5,279.8L343.5,268.3L343.8,256.9L344.6,245.5L345.7,234.1L347.2,222.8L349.1,211.5L351.3,200.3L353.9,189.2L356.9,178.2L360.3,167.3L364,156.6L368.1,146L372.6,135.6L377.4,125.3L382.6,115.3L388.1,105.4L394,95.7L400.2,86.3L406.8,77.1L413.7,68.2L420.9,59.5L428.4,51L436.3,42.9L444.5,35L452.9,27.5L461.7,20.2L470.8,13.3L480.1,6.7L489.7,0.4L497.7,-4.4L842,-4.4Z"},"bpts":{"brannan":[153.6,183.9],"bryant":[145.3,191.8],"king":[157.5,186.3],"union":[470.6,406],"hayward":[463.1,388.3],"emery":[257.6,122.4]}};
+const PC={pets:['#f6b8a8','#c4644d'],riv:['#cdbcea','#7b62a8'],back:['#aecdec','#43709f']};
+const INKH='#1f2a44';
+// [label, cat, true point, pin point or null, title, text, sources]
+const US=[
+ ['1','pets',[37,264],null,'Bay Area: headquarters and first warehouse','Offices on Brannan and Bryant streets in San Francisco, plus the 143,232 sq ft Union City distribution center (Jul 1999). Rivals Petopia (SF) and Petstore.com (Emeryville) were also here. See Map 2.',[1,6,28,31]],
+ ['2','pets',MD.pts.greenwood,null,'Greenwood, Indiana: second warehouse','Leased Dec 7, 1999 near Indianapolis. Once it “reached its full load of U.S. shipping” in mid-2000, gross margin improved from −20% to −3%.',[4,6]],
+ ['3','riv',MD.pts.pasadena,[122,350],'PetSmart.com, Pasadena','A PetSmart/Idealab joint venture that used PetSmart’s catalog fulfillment. It pulled its $115M IPO in Nov 2000, then bought the pets.com domain.',[32,34,6]],
+ ['4','back',MD.pts.seattle,null,'Amazon.com, Seattle','Largest shareholder: 40.7% before the IPO and 30.4% after. It later said the stake was worth “down to zero.”',[1,11]],
+ ['5','back',MD.pts.burbank,[62,334],'Disney / Catalyst Investments, Burbank','A Disney affiliate with 3.7%. ABC airtime worth $11.02M was paid for in Pets.com stock.',[1]],
+ ['6','back',MD.pts.phoenix,null,'PetSmart, Phoenix','Parent of PetSmart.com. It raised its stake from 48% to 81% after the IPO was withdrawn.',[34]],
+ ['7','back',MD.pts.sandiego,[100,406],'Petco, San Diego','Backed Petopia and shipped its orders from Petco distribution centers, then bought Petopia’s assets in Dec 2000.',[28,30]],
+ ['8','back',MD.pts.nyc,null,'Merrill Lynch, New York','Led the Feb 2000 IPO, then approached 50+ potential buyers in 2000. Fewer than 8 would even visit.',[1,5]],
+];
+const USN=[ // notes: [pinLabel, x,y, lines, target]
+ ['1',122,140,['Bay Area: HQ in SoMa + the Union City','warehouse (143,232 sq ft, 1999).','Goods + shipping cost more than','sales in every quarter reported.'],[60,256]],
+ ['2',560,415,['Greenwood, IN warehouse (Dec ’99).','Once at full load, gross margin','went from −20% to −3%.'],[667,292]],
+ ['4',175,24,['Amazon: 40.7% owner before the IPO,','30.4% after. Later: “down to zero.”'],[112,46]],
+ ['8',640,28,['Merrill Lynch pitched 50+ buyers','in 2000. Fewer than 8 would visit.'],[862,202]],
+ ['s',18,452,['Retail chains next door: PetSmart and','Petco backed rival e-tailers and lent','them their warehouses.'],[100,424]],
+ ['r',330,540,['Dashed rings = 1,000 miles from each','warehouse. Illustrative, not carrier zones.'],[268,506]],
+];
+const BAY=[
+ ['A','pets',MD.bpts.brannan,[166,152],'435 Brannan St, SF','Offices, leased Apr 8, 1999. The address in the S-1.',[1,6]],
+ ['B','pets',MD.bpts.bryant,[118,180],'945 Bryant St, SF','Offices, leased Sep 20, 1999.',[6]],
+ ['C','pets',MD.bpts.king,[184,206],'150–160 King St, SF','Warehouse, leased Sep 27, 1999.',[6]],
+ ['D','pets',MD.bpts.union,[492,420],'Union City distribution center','33201 Dowe Ave. 143,232 sq ft, subleased Jul 1, 1999.',[1,6]],
+ ['E','pets',MD.bpts.hayward,[446,366],'Hayward satellite','1035 Whipple Rd. 84,000 sq ft, Nov 5, 1999.',[6]],
+ ['F','riv',MD.bpts.emery,null,'Petstore.com, Emeryville','Discovery-backed rival, bought by Pets.com in Jul 2000 for stock plus $3M cash.',[7,31]],
+];
+const BAYN=[
+ ['A',10,262,['SoMa, 1999: two office leases','plus a King St warehouse.'],[150,214]],
+ ['D',120,446,['East Bay warehouse belt: Union City DC','(Jul ’99) + Hayward satellite (Nov ’99).'],[470,428]],
+ ['F',300,30,['Rival Petstore.com, Emeryville.','Pets.com bought it in July 2000.'],[268,116]],
+];
+const SVGNS='http://www.w3.org/2000/svg';
+const el=(t,a,p)=>{const e=document.createElementNS(SVGNS,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e};
+function drawPins(svg,list,keyEl,r){
+ const g=el('g',{class:'pins'},svg);
+ list.forEach((m,i)=>{const [lab,cat,tp,pp]=m;const p=pp||tp;const c=PC[cat];
+  if(pp){el('line',{x1:tp[0],y1:tp[1],x2:p[0],y2:p[1],stroke:c[1],'stroke-width':1.2},g);el('circle',{cx:tp[0],cy:tp[1],r:2.6,fill:c[1]},g)}
+  const pg=el('g',{class:'pin','data-i':i,tabindex:0,role:'button','aria-label':lab+': '+m[4]},g);
+  el('circle',{class:'pd',cx:p[0],cy:p[1],r:r,fill:c[0],filter:'url(#pinShadow)'},pg);
+  const t=el('text',{class:'pn',x:p[0],y:p[1]+r*0.38,'text-anchor':'middle','font-size':r*1.08},pg);t.textContent=lab;
+ });
+ keyEl.innerHTML=list.map((m,i)=>`<li data-i="${i}"><span class="kn" style="background:${PC[m[1]][0]}">${m[0]}</span><div><b>${m[4]}</b><br>${m[5]} ${fn(m[6])}</div></li>`).join('');
+ const sel=i=>{svg.querySelectorAll('.pin').forEach(x=>x.classList.toggle('sel',+x.dataset.i===i));keyEl.querySelectorAll('li').forEach(x=>x.classList.toggle('sel',+x.dataset.i===i))};
+ svg.querySelectorAll('.pin').forEach(x=>{x.onclick=()=>{sel(+x.dataset.i);const li=keyEl.children[+x.dataset.i];if(innerWidth<700)li.scrollIntoView({behavior:'smooth',block:'center'})};x.onkeydown=e=>{if(e.key==='Enter')x.onclick()}});
+ keyEl.querySelectorAll('li').forEach(li=>li.onmouseenter=li.onclick=()=>sel(+li.dataset.i));
+}
+function defs(svg){const d=el('defs',{},svg);const f=el('filter',{id:'pinShadow',x:'-50%',y:'-50%',width:'200%',height:'200%'},d);el('feDropShadow',{dx:0,dy:1,stdDeviation:1.2,'flood-color':'#000','flood-opacity':.22},f)}
+function drawNotes(svg,notes,fs,seedBase){
+ if(typeof rough==='undefined')return;const rc=rough.svg(svg);const g=el('g',{class:'anno'},svg);
+ notes.forEach((n,k)=>{const [lab,x,y,lines,tgt]=n;
+  const t=el('text',{x:x+12,y:y+fs+4,'font-size':fs,'font-weight':600},g);
+  lines.forEach((ln,j)=>{const ts=el('tspan',{x:x+12,dy:j?fs*1.1:0},t);ts.textContent=ln});
+  let bb=t.getBBox();if(!bb.width)bb={width:Math.max(...lines.map(l=>l.length))*fs*.42,height:lines.length*fs*1.1+4};const w=bb.width+24,h=bb.height+16;
+  const box=rc.rectangle(x,y,w,h,{roughness:1.3,stroke:INKH,strokeWidth:1.4,fill:'#fffdf6',fillStyle:'solid',seed:seedBase+k*7});
+  g.insertBefore(box,t);
+  // arrow from nearest box edge point to target
+  const cx=Math.max(x,Math.min(tgt[0],x+w)),cy=Math.max(y,Math.min(tgt[1],y+h));
+  let sx=cx,sy=cy;if(cx>x&&cx<x+w&&cy>y&&cy<y+h){sx=x+w/2;sy=y+h}
+  const mx=(sx+tgt[0])/2+(tgt[1]-sy)*0.18,my=(sy+tgt[1])/2-(tgt[0]-sx)*0.18;
+  g.appendChild(rc.curve([[sx,sy],[mx,my],[tgt[0],tgt[1]]],{roughness:1.1,stroke:INKH,strokeWidth:1.6,seed:seedBase+k*7+1}));
+  const ang=Math.atan2(tgt[1]-my,tgt[0]-mx),L=11;
+  [0.45,-0.45].forEach((da,q)=>g.appendChild(rc.line(tgt[0],tgt[1],tgt[0]-L*Math.cos(ang+da),tgt[1]-L*Math.sin(ang+da),{roughness:.8,stroke:INKH,strokeWidth:1.6,seed:seedBase+k*7+2+q})));
+ });
+ return g}
+function roughMarks(svg){if(typeof rough==='undefined')return;const rc=rough.svg(svg);const g=svg.querySelector('.anno');if(!g)return;
+ if(svg.id==='mapOv'){g.insertBefore(rc.ellipse(38,262,64,52,{roughness:1.4,stroke:INKH,strokeWidth:1.5,seed:41}),g.firstChild);
+  g.insertBefore(rc.rectangle(40,318,186,108,{roughness:1.5,stroke:INKH,strokeWidth:1.3,seed:43}),g.firstChild)}
+ else{g.insertBefore(rc.ellipse(150,182,120,96,{roughness:1.4,stroke:INKH,strokeWidth:1.5,seed:47}),g.firstChild);
+  g.insertBefore(rc.ellipse(468,396,90,110,{roughness:1.4,stroke:INKH,strokeWidth:1.5,seed:49}),g.firstChild)}}
